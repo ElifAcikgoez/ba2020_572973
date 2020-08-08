@@ -1,16 +1,64 @@
 {% load static %}
-<head>
-    <link rel="stylesheet" href="{% static 'css/list.css' %}">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-
-<link rel="stylesheet" href="{% static 'css/list.css' %}">
 <html>
     <head>
-
+        <link rel="stylesheet" href="{% static 'css/list.css' %}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
-    <body>
-        <p>Halli-Hallo!</p>
-        <p>Es funktioniert!</p>
-    </body>
 </html>
+
+<div class="center-column">
+<div class="container-fluid" id="wrapper">
+	<div class="row">
+
+		<h1>
+			 WAS MÖCHTEST DU HEUTE ERLEDIGEN?
+		</h1>
+
+
+	</div>
+</div>
+	<form method="POST" action="/">
+		{% csrf_token %}
+		{{form.title}}
+
+		<button type="submit" class="btn btn-info" id="add-btn">HINZUFÜGEN</button>
+	</form>
+
+<div class="row t10">
+	<div class="col-lg-12">
+		<div class="btn-toolbar">
+			<div class="btn-group">
+				<a href="{% url 'deletecomplete' %}"><button type="button" class="btn btn-danger">
+					<i class="glyphicon glyphicon-trash"></i> ERLEDIGTE LÖSCHEN
+				</button></a>
+				</div>
+			<div class="btn-group">
+				<a href="{% url 'deleteall' %}"><button type="button" class="btn btn-danger">
+					<i class="glyphicon glyphicon-trash"></i> ALLE LÖSCHEN
+				</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<div class="todo-list">
+
+	{% for task in tasks %}
+		<div class="item-row">
+			<a class="btn btn-sm btn-info" href="{% url 'update_task' task.id %}">Updaten</a>
+			<a class="btn btn-sm btn-danger" href="{% url 'delete' task.id %}">Löschen</a>
+
+
+			{% if task.complete == True %}
+
+			<li class="list-group todo-completed">{{ task }}</li>
+			{% else %}
+
+			<a href="{% url 'complete' task.id %}"><li class="list-group">{{task}}</li></a>
+			{% endif %}
+		</div>
+
+	{% endfor %}
+
+	</div>
+</div>

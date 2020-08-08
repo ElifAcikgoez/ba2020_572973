@@ -1,11 +1,6 @@
 
-
-	body{
-		background-color: #a078ac;
-	}
-
 	input{
-		width: 85%;
+		width: 70%;
 		padding: 12px 20px;
 		margin: 8px 0;
 		box-sizing: border-box;
@@ -22,21 +17,18 @@
 
 	}
 
-	.submit{
-		background-color: #80bfb2;
-	}
 
 	.center-column{
-		width:  600px ;
+		width:  800px ;
 		margin: 20px auto ;
 		padding:20px;
-		background-color: #fff;
+		background-color: #ffffff;
 		border-radius: 5px;
 		box-shadow: 6px 2px 30px 0px rgba(0,0,0,0.75);
 	}
 
 	.item-row{
-		background-color: #a078ac;
+		background-color: #ffffff;
 		margin: 10px;
 		padding: 20px;
 		border-radius: 5px;
@@ -45,16 +37,13 @@
 		box-shadow: 0px -1px 10px -4px rgba(0,0,0,0.75);
 	}
 
-	.btn-danger{
-		background-color: #de6780;
-		border-color: #bb00e5;
-	}
+
 	.todo-completed {
 		text-decoration-line: line-through;
 		background: rgba(149, 166, 165, 0.3);
 	}
 	.list-group {
-		background: #a078ac;
-		color: #ffffff;
+		background: #ffffff;
+		color: #000000;
 	}
 
