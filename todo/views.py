@@ -20,7 +20,7 @@ def index(request):
 
 
 	context = {'tasks':tasks, 'form':form}
-	return render(request, 'tasks/list.html', context)
+	return render(request, 'todo/list.html', context)
 
 def updateTask(request, pk):
 	task = Task.objects.get(id=pk)
@@ -35,7 +35,7 @@ def updateTask(request, pk):
 
 	context = {'form':form}
 
-	return render(request, 'tasks/update_task.html', context)
+	return render(request, 'todo/update_task.html', context)
 
 def deleteTask(request, pk):
 	item = Task.objects.get(id=pk)
@@ -45,7 +45,7 @@ def deleteTask(request, pk):
 		return redirect('/')
 
 	context = {'item':item}
-	return render(request, 'tasks/delete.html', context)
+	return render(request, 'todo/delete.html', context)
 
 def completeTodo(request, todo_id):
     todo = Task.objects.get(pk=todo_id)
