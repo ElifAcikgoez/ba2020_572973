@@ -1,10 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
-</body>
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/update_task.css' %}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"
+	  xmlns="http://www.w3.org/1999/html">
+    </head>
+ <div class="body">
+    <div class="center-column">
+    <div class="container-fluid" id="wrapper">
+	    <div class="row">
+		    <h1>
+			    Aufgabe Updaten
+
+		    </h1>
+	    </div>
+    </div>
+
+
+    <form method="POST" action="">
+	    {% csrf_token %}
+
+	    {{form}}
+
+	    <button type="submit" class="btn btn-info" id="add-btn">Bestätigen</button>
+
+    </form>
+    </div>
+ </div>
 </html>
