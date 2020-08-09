@@ -1,9 +1,11 @@
+
 from django.shortcuts import render
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
 from .models import *
 from .forms import *
+from .models import  Task
 
 # Create your views here.
 
@@ -63,6 +65,10 @@ def deleteall(request):
     Task.objects.all().delete()
 
     return redirect('list')
+
+
+
+
 
 
 
