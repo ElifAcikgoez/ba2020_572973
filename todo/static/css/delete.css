@@ -1,8 +1,10 @@
 body{
-	background-color: #a078ac;
-	background-image: url("blume.jpg");
+
+	background-image: url("plants.jpg");
 
 }
+
+
 .center-column{
 	width:  600px ;
 	margin: 20px auto ;
