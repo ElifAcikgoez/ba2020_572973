@@ -19,11 +19,13 @@
 
 	    </div>
     </div>
+
 	    <form method="POST" action="/">
 		    {% csrf_token %}
 		    {{form.title}}
 
 		    <button type="submit" class="btn btn-info" id="add-btn">HINZUFÜGEN</button>
+
 	    </form>
 
     <div class="row t10">
