@@ -16,11 +16,12 @@
 		</h1>
 
 	</div>
+    <form>
+    <button
+            type="submit" formaction="http://127.0.0.1:8000/"  class="btn btn-danger" id="add-btn">Abbrechen
 
-    <button type="submit" class="btn btn-danger" id="add-btn">
-        <a href="{% url 'list' %}" >Abbrechen</a>
     </button>
-
+    </form>
 	<form method="POST" action="">
 	{% csrf_token %}
 	<button type="submit" class="btn btn-success" id="add-btn">Ja</button>
