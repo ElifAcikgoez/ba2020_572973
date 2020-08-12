@@ -17,14 +17,19 @@
 
 	</div>
 
-	<button type="submit" class="btn btn-info" id="add-btn">
-		<a href="{% url 'list' %}" >Abbrechen</a>
-	</button>
+    <button type="submit" class="btn btn-danger" id="add-btn">
+        <a href="{% url 'list' %}" >Abbrechen</a>
+    </button>
 
 	<form method="POST" action="">
 	{% csrf_token %}
-	<button type="submit" class="btn btn-info" id="add-btn">Ja</button>
+	<button type="submit" class="btn btn-success" id="add-btn">Ja</button>
     </form>
+
+
+</div>
+
+
 
 </div>
 </div>

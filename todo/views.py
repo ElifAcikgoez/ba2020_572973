@@ -65,6 +65,13 @@ def deleteall(request):
     return redirect('list')
 
 
+def details(request, id):
+    todo = Task.objects.get(id=id)
+
+    context = {
+        'todo':todo
+    }
+    return render(request, 'update_task.html', context)
 
 
 
