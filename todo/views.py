@@ -1,11 +1,8 @@
 
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
-
 from .forms import *
 from .models import  Task
 
-# Create your views here.
 
 def index(request):
 	tasks = Task.objects.all()
@@ -73,8 +70,3 @@ def details(request, id):
     }
     return render(request, 'update_task.html', context)
 
-
-
-
-
-# Create your views here.
