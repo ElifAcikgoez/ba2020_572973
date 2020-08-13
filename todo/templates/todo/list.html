@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         {% load static %}
         <link rel="stylesheet" href="{% static 'css/list.css' %}">
@@ -53,7 +54,7 @@
 
 			    <a class="btn btn-sm btn-dark" href="{% url 'update_task' task.id %}">Bearbeiten
                  <span class="glyphicon glyphicon-pencil"></span>   </a>
-			    <a class="btn btn-sm btn-danger" href="{% url 'delete' task.id %}">Löschen
+			    <a class="btn btn-sm btn-danger" href="{% url 'delete' task.id %}">
                 <span class="glyphicon glyphicon-trash"></span>
                 </a>
 
