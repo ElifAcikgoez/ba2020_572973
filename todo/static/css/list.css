@@ -13,8 +13,6 @@ input{
 input::placeholder {
 	color: rgba(125, 125, 125, 0.32);
 
-
-
 }
 h1{
 	color: #ffffff;
@@ -53,7 +51,3 @@ h1{
 	color: #ffffff;
 	}
 
-.btn-danger
-{
-	background-color: floralwhite;
-}
