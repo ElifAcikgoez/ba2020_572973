@@ -4,8 +4,12 @@
         {% load static %}
         <link rel="stylesheet" href="{% static 'css/list.css' %}">
         <link rel="stylesheet" type="text/css" href="../../static/css/list.css"/>
-         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     </head>
     <div class="body">
@@ -23,34 +27,36 @@
 		    {{form.title}}
 		    <button
                     type="submit"
-                    class="btn btn-success"
+                    class="btn btn-dark"
                     id="add-btn">HINZUFÜGEN
             </button>
 	    </form>
 
-        <div class="row t10">
-	        <div class="col-lg-12">
-		         <div class="btn-toolbar">
-			         <div class="btn-group">
-                         <a href="{% url 'deletecomplete' %}"><button type="button" class="btn btn-danger">
-					         <i class="glyphicon glyphicon-trash"></i> ERLEDIGTE LÖSCHEN
-				            </button></a>
-                        </div>
-                    <div class="btn-group">
-				            <a href="{% url 'deleteall' %}">
-                                <button type="button" class="btn btn-danger">
-                                    <i class="glyphicon glyphicon-trash"></i> ALLE LÖSCHEN
-				                 </button></a>
-			         </div>
-		        </div>
-	         </div>
-        </div>
+       <div class="row t10">
+	    <div class="col-lg-12">
+		    <div class="btn-toolbar">
+			    <div class="btn-group">
+                    <a href="{% url 'deletecomplete' %}"><button type="button" class=" btn btn-danger">
+					    <i class="glyphicon glyphicon-trash"></i> ERLEDIGTE LÖSCHEN
+				    </button></a>
+				    </div>
+			    <div class="btn-group">
+				    <a href="{% url 'deleteall' %}"><button type="button" class="btn btn-danger">
+					    <i class="glyphicon glyphicon-trash"></i> ALLE LÖSCHEN
+				    </button></a>
+			    </div>
+		    </div>
+	    </div>
+    </div>
 	    <div class="todo-list">
          {% for task in tasks %}
 		    <div class="item-row">
 
-			    <a class="btn btn-sm btn-secondary" href="{% url 'update_task' task.id %}">Bearbeiten</a>
-			    <a class="btn btn-sm btn-danger" href="{% url 'delete' task.id %}">Löschen</a>
+			    <a class="btn btn-sm btn-dark" href="{% url 'update_task' task.id %}">Bearbeiten
+                 <span class="glyphicon glyphicon-pencil"></span>   </a>
+			    <a class="btn btn-sm btn-danger" href="{% url 'delete' task.id %}">Löschen
+                <span class="glyphicon glyphicon-trash"></span>
+                </a>
 
 
 			    {% if task.complete == True %}

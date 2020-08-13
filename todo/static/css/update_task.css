@@ -1,5 +1,5 @@
 body{
-	background-color: #a078ac;
+
 	background-image: url("black.jpg");
 
 }
@@ -7,14 +7,15 @@ body{
 	width:  600px ;
 	margin: 20px auto ;
 	padding:20px;
-	background-color: #fff;
+	background-color: rgba(118, 118, 118, 0.87);
 	border-radius: 5px;
-	box-shadow: 6px 2px 30px 0px rgba(0,0,0,0.75);
+	box-shadow: 6px 2px 30px 0px rgba(0, 0, 0, 0.75);
 }
 h1{
-	color: #000000;
+	text-align: center;
+	color: #ffffff;
 	font-size:20pt;
-	font-family: "Comic Sans MS", "lucida console", sans-serif;
+	font-family: "monospace", Courier, "lucida console";
 
 }
 
