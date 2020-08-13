@@ -1,31 +1,31 @@
-
-{% load static %}
+<!DOCTYPE html>
 <html>
     <head>
+        {% load static %}
         <link rel="stylesheet" href="{% static 'css/update_task.css' %}">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-	  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"
-	  xmlns="http://www.w3.org/1999/html">
     </head>
  <div class="body">
     <div class="center-column">
-    <div class="container-fluid" id="wrapper">
-	    <div class="row">
-		    <h1>
-			    Aufgabe Updaten
+        <div class="container-fluid" id="wrapper">
+	        <div class="row">
+		        <h1>
+			        Aufgabe Updaten
 
-		    </h1>
-	    </div>
-    </div>
+		        </h1>
+	        </div>
+        </div>
 
 
     <form method="POST" action="">
 
 	    {% csrf_token %}
-
 	    {{form}}
-
-	    <button type="submit" class="btn btn-success" id="add-btn">Bestätigen</button>
+	    <button
+                type="submit"
+                class="btn btn-success"
+                id="add-btn">Bestätigen
+        </button>
 
     </form>
 

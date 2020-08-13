@@ -1,54 +1,52 @@
-{% load static %}
-<html xmlns="http://www.w3.org/1999/html">
-
-<head>
-    <link rel="stylesheet" type="text/css" href="../../static/css/list.css"/>
-</head>
-    <link rel="stylesheet" href="{% static 'css/list.css' %}">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
- <div class="body">
-    <div class="center-column">
-    <div class="container-fluid" id="wrapper">
-	    <div class="row">
-
-		    <h1>
-			     WAS MÖCHTEST DU ERLEDIGEN?
-		    </h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/list.css' %}">
+        <link rel="stylesheet" type="text/css" href="../../static/css/list.css"/>
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
-	    </div>
-    </div>
+    </head>
+    <div class="body">
+        <div class="center-column">
+            <div class="container-fluid" id="wrapper">
+	            <div class="row">
+		            <h1>
+			             WAS MÖCHTEST DU ERLEDIGEN?
+		             </h1>
+                </div>
+            </div>
 
 	    <form method="POST" action="/">
 		    {% csrf_token %}
 		    {{form.title}}
-
-		    <button type="submit" class="btn btn-success" id="add-btn">HINZUFÜGEN</button>
-
+		    <button
+                    type="submit"
+                    class="btn btn-success"
+                    id="add-btn">HINZUFÜGEN
+            </button>
 	    </form>
 
-    <div class="row t10">
-	    <div class="col-lg-12">
-		    <div class="btn-toolbar">
-			    <div class="btn-group">
-                    <a href="{% url 'deletecomplete' %}"><button type="button" class="btn btn-danger">
-					    <i class="glyphicon glyphicon-trash"></i> ERLEDIGTE LÖSCHEN
-				    </button></a>
-				    </div>
-			    <div class="btn-group">
-				    <a href="{% url 'deleteall' %}"><button type="button" class="btn btn-danger">
-					    <i class="glyphicon glyphicon-trash"></i> ALLE LÖSCHEN
-				    </button></a>
-			    </div>
-		    </div>
-	    </div>
-    </div>
-
+        <div class="row t10">
+	        <div class="col-lg-12">
+		         <div class="btn-toolbar">
+			         <div class="btn-group">
+                         <a href="{% url 'deletecomplete' %}"><button type="button" class="btn btn-danger">
+					         <i class="glyphicon glyphicon-trash"></i> ERLEDIGTE LÖSCHEN
+				            </button></a>
+                        </div>
+                    <div class="btn-group">
+				            <a href="{% url 'deleteall' %}">
+                                <button type="button" class="btn btn-danger">
+                                    <i class="glyphicon glyphicon-trash"></i> ALLE LÖSCHEN
+				                 </button></a>
+			         </div>
+		        </div>
+	         </div>
+        </div>
 	    <div class="todo-list">
          {% for task in tasks %}
-
-
 		    <div class="item-row">
 
 			    <a class="btn btn-sm btn-secondary" href="{% url 'update_task' task.id %}">Bearbeiten</a>
@@ -64,7 +62,7 @@
 			    {% endif %}
 		    </div>
 
-	    {% endfor %}
+         {% endfor %}
 
 	    </div>
     </div>

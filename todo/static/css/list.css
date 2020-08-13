@@ -1,6 +1,6 @@
 body{
-	background-color: #a078ac;
-	background-image: url("plants.jpg");
+
+	background-image: url("black.jpg");
 
 }
 input{
@@ -16,9 +16,9 @@ input::placeholder {
 
 }
 h1{
-	color: #070706;   /* Farbe orange */
-	font-size:20pt;  /* Größe 28pt   */
-	font-family: "Comic Sans MS", "lucida console", sans-serif;
+	color: #070706;
+	font-size:20pt;
+	font-family: "monospace", Courier, "lucida console";
 }
 
 
@@ -26,7 +26,7 @@ h1{
 	width:  800px ;
 	margin: 20px auto ;
 	padding:20px;
-	background-color: #ffffff;
+	background-color: rgb(255, 255, 255);
 	border-radius: 5px;
 	box-shadow: 6px 2px 30px 0px rgba(0,0,0,0.75);
 }
@@ -37,7 +37,7 @@ h1{
 	margin: 10px;
 	padding: 20px;
 	border-radius: 5px;
-	color: #fff;
+	color: rgba(255, 255, 255, 0.45);
 	font-size: 16px;
 	box-shadow: 0px -1px 10px -4px rgba(0,0,0,0.75);
 }
@@ -45,10 +45,10 @@ h1{
 
 .todo-completed {
 	text-decoration-line: line-through;
-	background: rgba(149, 166, 165, 0.3);
+
 }
 .list-group {
-	background-color: rgba(255, 255, 255, 0.02);
+
 	color: #000000;
 	}
 
