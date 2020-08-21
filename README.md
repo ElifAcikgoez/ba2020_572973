@@ -2,26 +2,54 @@
 
 ## Inhalt
 1. [Allgemeine Informationen](#allgemeine-informationen)
-2. [Technologien](#technologien)
-3. [Installation](#installation)
+2. [Informationen zur Anwendung](#informationen-zur-anwendung)
+   > [Todo hinzufügen](#todo-hinzufügen),<br>
+   > [Todo einzeln löschen](#todo-einzeln-löschen),<br>
+   > [Todo als erledigt markieren](#todo-als-erledigt-markieren),<br>
+   > [Todo bearbeiten](#todo-bearbeiten),<br>
+   > [Alle Todos löschen](#alle-todos-löschen),<br>
+   > [Nur erledigte todos löschen](#nur-erledigte-todos-löschen)<br>
+3. [Technologien](#technologien)
+4. [Installation](#installation)
 
 
 
-### Allgemeine Informationen
+## Allgemeine Informationen
 ***
 
 In diesem Projekt handelt es um eine Todo-Liste indem jeder Anwender seine zu erledigenden Aufgaben eintragen und abhacken(durchstreichen) kann. Außerdem sind alle CRUD-Operationen implementiert.
 
-**Todo hinzufügen:**
-<br>
+## Informationen zur Anwendung
+***
+#### Todo hinzufügen:
 Auf der Startseite befindet sich die Todo-Liste wo man das eintragen kann, was man erledigen möchte. Es können beliebig viele einträge gemacht werden.
-Um ein Todo hinzuzufügen muss das vorhaben in das Eingabefeld eingetippt werden und anschließend auf den "hinzufügen" button gegklickt werden: 
+Um ein Todo hinzuzufügen muss das vorhaben in das Texteingabefeld eingetippt werden und anschließend auf den "Hinzufügen" button gegklickt werden: 
 
-![](https://media.giphy.com/media/fYYgfCi1vb5Kfz4iU1/giphy.gif)
+[](https://media.giphy.com/media/fYYgfCi1vb5Kfz4iU1/giphy.gif)
 
-**Todo einzeln löschen**
-<br>
+#### Todo einzeln löschen:
+Über dem todo-text befindet sich ein roter Mülltonenn-icon Button, womit man jedes einzelne todo löschen kann. Wenn man auf den icon klickt, erscheint eine neue "seite" und 
+wird gefragt ob man das gewählte wirklich löschen möchte. Es kann mit "Ja" bestätigt werden oder mit "Abbrechen" zurück zur startseite geleitet werden :
 
+![](https://media.giphy.com/media/lo51dtcuUI3V9NNJ34/giphy.gif)
+
+#### Todo als erledigt markieren:
+Man kann direkt auf den Todo-text klicken , somit wird der todo durchgestrichen und als "erledigt" abgespeichert.
+
+![](https://media.giphy.com/media/kaU0EIWu6sKv1hX4Py/giphy.gif)
+
+#### Todo bearbeiten:
+Auf den dunkelgrauen "Bearbeiten" Button mit dem stift-icon über dem gewünschten todo-text klicken.
+Der eingetragene todo kann im nachhinein umbenannt werden ,  ein hacken bei "Complete" gesetzt werden wenn es erledigt ist oder der hacken kann rausgenommen werden wenn die aufgabe doch nicht erledigt worden ist. Wenn der hacken gesetzt wurde, erscheint der todo-text auf der startseite als durchgestrichen und wenn der hacken raus ist , ist der text wieder normal.
+
+
+#### Alle Todos löschen:
+Unter dem Eingabetextfeld auf den roten Button "ALLE LÖSCHEN" klicken.
+
+#### Nur erledigte Todos löschen:
+Unter dem Eingabetextfeld auf den roten Button "ERLEDIGTE LÖSCHEN" klicken.
+
+![](https://media.giphy.com/media/LnuJ3HXCwmSvYrNzfg/giphy.gif)
 
 
 ## Technologien
