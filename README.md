@@ -2,22 +2,22 @@
 
 ## Inhalt
 1. [Allgemeine Informationen](#allgemeine-informationen)
-2. [Technologies](#technologies)
+2. [Technologien](#technologien)
 3. [Installation](#installation)
 
 
 
 ### Allgemeine Informationen
 ***
-In diesem Projekt geht es um eine ToDo-Liste indem jeder Anwender seine zu erledigenden Aufgaben eintragen und abhacken(durchstreichen) kann.
-Die Nutzerin/ Der Nutzer dieser Web-Anwendung kann jedes einzelne ToDo löschen sowie alle erledigten ToDos und alle notierten ToDos aufeinmal löschen.
-Die eingetragenen ToDos können im nachhinein auch bearbeitet werden (zb. umbenennen , erledigt/nicht erledigt). Wenn der Anwender/ die Anwenderin ein todo löschen möchte
-wird er/sie gefragt ob die aufgabe wirklich gelöscht werden soll, man kann den vorgang abbrechen oder mit "ja" bestätigen.
+In diesem Projekt geht es um eine Todo-Liste indem jeder Anwender seine zu erledigenden Aufgaben eintragen und abhacken(durchstreichen) kann.
+Der Nutzer/in dieser Web-Anwendung kann jedes einzelne Todo löschen ,alle erledigten Todos und alle vorhandenen Todos aufeinmal löschen.
+Die eingetragenen Todos können im nachhinein auch bearbeitet werden (zb. umbenennen , erledigt/nicht erledigt). Wenn der Anwender/in ein todo löschen möchte
+wird er/sie gefragt ob die Aufgabe wirklich gelöscht werden soll, man kann den vorgang abbrechen oder mit "ja" bestätigen.
 
 ![Alt Text](https://media.giphy.com/media/RN3EjQdQbOXGb1NMbh/giphy.gif)
 
 
-## Technologies
+## Technologien
 ***
 Eine Liste mit den verwendeten technologien in diesem Projekt:
 * Verwendete Entwicklungsumgebung : [PyCharm Professional Edition Version](https://www.jetbrains.com/de-de/pycharm/) 2020.1
