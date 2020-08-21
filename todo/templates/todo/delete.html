@@ -23,9 +23,11 @@
         <div style="text-align: -webkit-center">
              <form>
                     <button
-                         type="submit"
-                         formaction="http://127.0.0.1:8000/"
-                         class="btn btn-danger" id="add-btn">Abbrechen
+
+                        type="submit"
+                        class="btn btn-danger"
+                        id="add-btn">
+                        <a href="{% url 'list' %}" >Abbrechen</a>
                      </button>
 
              </form>
