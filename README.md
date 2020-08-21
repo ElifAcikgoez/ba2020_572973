@@ -9,12 +9,19 @@
 
 ### Allgemeine Informationen
 ***
-In diesem Projekt geht es um eine Todo-Liste indem jeder Anwender seine zu erledigenden Aufgaben eintragen und abhacken(durchstreichen) kann.
-Der Nutzer/in dieser Web-Anwendung kann jedes einzelne Todo löschen ,alle erledigten Todos und alle vorhandenen Todos aufeinmal löschen.
-Die eingetragenen Todos können im nachhinein auch bearbeitet werden (zb. umbenennen , erledigt/nicht erledigt). Wenn der Anwender/in ein todo löschen möchte
-wird er/sie gefragt ob die Aufgabe wirklich gelöscht werden soll, man kann den vorgang abbrechen oder mit "ja" bestätigen.
 
-![Alt Text](https://media.giphy.com/media/RN3EjQdQbOXGb1NMbh/giphy.gif)
+In diesem Projekt handelt es um eine Todo-Liste indem jeder Anwender seine zu erledigenden Aufgaben eintragen und abhacken(durchstreichen) kann. Außerdem sind alle CRUD-Operationen implementiert.
+
+**Todo hinzufügen:**
+<br>
+Auf der Startseite befindet sich die Todo-Liste wo man das eintragen kann, was man erledigen möchte. Es können beliebig viele einträge gemacht werden.
+Um ein Todo hinzuzufügen muss das vorhaben in das Eingabefeld eingetippt werden und anschließend auf den "hinzufügen" button gegklickt werden: 
+
+![](https://media.giphy.com/media/fYYgfCi1vb5Kfz4iU1/giphy.gif)
+
+**Todo einzeln löschen**
+<br>
+
 
 
 ## Technologien
