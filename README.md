@@ -1,4 +1,4 @@
-# ToDo-Liste ba2020_572973 
+# ToDo-Liste ba2020_572973 :memo:
 
 ## Inhalt
 1. [Allgemeine Informationen](#allgemeine-informationen)
@@ -18,6 +18,8 @@
 ***
 
 In diesem Projekt handelt es um eine Todo-Liste indem jeder Anwender seine zu erledigenden Aufgaben eintragen und abhacken(durchstreichen) kann. Außerdem sind alle CRUD-Operationen implementiert.
+
+:globe_with_meridians: Veröffentlicht auf : 
 
 ## Informationen zur Anwendung
 ***
@@ -42,6 +44,8 @@ Man kann direkt auf den Todo-text klicken , somit wird der todo durchgestrichen 
 Auf den dunkelgrauen "Bearbeiten" Button mit dem stift-icon über dem gewünschten todo-text klicken.
 Der eingetragene todo kann im nachhinein umbenannt werden ,  ein hacken bei "Complete" gesetzt werden wenn es erledigt ist oder der hacken kann rausgenommen werden wenn die aufgabe doch nicht erledigt worden ist. Wenn der hacken gesetzt wurde, erscheint der todo-text auf der startseite als durchgestrichen und wenn der hacken raus ist , ist der text wieder normal.
 
+![](https://media.giphy.com/media/hpG6HRO1D5ACc88k4m/giphy.gif)
+
 
 #### Alle Todos löschen:
 Unter dem Eingabetextfeld auf den roten Button "ALLE LÖSCHEN" klicken.
@@ -50,6 +54,8 @@ Unter dem Eingabetextfeld auf den roten Button "ALLE LÖSCHEN" klicken.
 Unter dem Eingabetextfeld auf den roten Button "ERLEDIGTE LÖSCHEN" klicken.
 
 ![](https://media.giphy.com/media/LnuJ3HXCwmSvYrNzfg/giphy.gif)
+
+
 
 
 ## Technologien
@@ -63,9 +69,9 @@ Eine Liste mit den verwendeten technologien in diesem Projekt:
 * CSS
 
 
-## Installation
+## Installation 
 ***
-Kleines Intro zur installation:
+Kleines Intro zur installation :octocat: :
 ```
 $ git clone https://github.com/ElifAcikgoez/ba2020_572973.git
 $ (myvenv) ~/Mustermann$ python manage.py runserver
