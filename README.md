@@ -16,8 +16,10 @@
 
 ## Allgemeine Informationen
 ***
-
-In diesem Projekt handelt es um eine Todo-Liste indem jeder Anwender seine zu erledigenden Aufgaben eintragen und abhacken(durchstreichen) kann. Außerdem sind alle CRUD-Operationen implementiert.
+**Vision :**
+Eine To-Do app die für alle zugänglich ist und bei der Planung und Erledigung von Aufgaben unterstützt.<br> - Entwickelt um den überblick der zu erledigenden aufgaben strukturiert und visuell zu erfassen. -<br>
+<br>
+Die Webapp ist an alle gerichtet ,die Struktur in den Alltag einbringen möchten und soll die Möglichkeit bieten, alle anstehenden Aufgaben in eine Liste einzutragen um sie dann abarbeiten zu können. Somit soll keine Aufgabe , der für den aktuellen tag vorgenommen wurde ,vergessen werden.
 
 :globe_with_meridians: Veröffentlicht auf :  https://todolistelif.pythonanywhere.com
 
@@ -26,8 +28,9 @@ In diesem Projekt handelt es um eine Todo-Liste indem jeder Anwender seine zu er
 #### Todo hinzufügen:
 Auf der Startseite befindet sich die Todo-Liste wo man das eintragen kann, was man erledigen möchte. Es können beliebig viele einträge gemacht werden.
 Um ein Todo hinzuzufügen muss das vorhaben in das Texteingabefeld eingetippt werden und anschließend auf den "Hinzufügen" button gegklickt werden: 
+❗️Achtung: Eingabe nur bis zu 200 zeichen❗️
 
-[](https://media.giphy.com/media/fYYgfCi1vb5Kfz4iU1/giphy.gif)
+![](https://media.giphy.com/media/fYYgfCi1vb5Kfz4iU1/giphy.gif)
 
 #### Todo einzeln löschen:
 Über dem todo-text befindet sich ein roter Mülltonenn-icon Button, womit man jedes einzelne todo löschen kann. Wenn man auf den icon klickt, erscheint eine neue "seite" und 
