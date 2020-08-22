@@ -19,7 +19,7 @@
 
 In diesem Projekt handelt es um eine Todo-Liste indem jeder Anwender seine zu erledigenden Aufgaben eintragen und abhacken(durchstreichen) kann. Außerdem sind alle CRUD-Operationen implementiert.
 
-:globe_with_meridians: Veröffentlicht auf : https://elifnuracikgoez.pythonanywhere.com 
+:globe_with_meridians: Veröffentlicht auf :  https://todolistelif.pythonanywhere.com
 
 ## Informationen zur Anwendung
 ***
