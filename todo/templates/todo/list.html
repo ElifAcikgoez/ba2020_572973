@@ -54,9 +54,12 @@
 
 			    <a class="btn btn-sm btn-dark" href="{% url 'update_task' task.id %}">Bearbeiten
                  <span class="glyphicon glyphicon-pencil"></span>   </a>
+                <a class="btn btn-dark" href="{% url 'add_note_to_post' pk=task.pk %}">Notiz
+                <span class="glyphicon glyphicon-pencil"></span>  </a>
 			    <a class="btn btn-sm btn-danger" href="{% url 'delete' task.id %}">
                 <span class="glyphicon glyphicon-trash"></span>
                 </a>
+
 
 
 			    {% if task.complete == True %}
@@ -66,6 +69,18 @@
 
 			    <a href="{% url 'complete' task.id %}"><li class="list-group">{{task}}</li></a>
 			    {% endif %}
+
+
+                {% block content %}
+                    {% if user.is_authenticated %}
+                    {% endif %}
+                    {% for note in task.notes.all %}
+                    <h5>Notiz: {{ note.text }}</h5>
+                    {% empty %}
+                    <p>No comments here yet :(</p>
+                    {% endfor %}
+                {% endblock %}
+
 		    </div>
 
          {% endfor %}

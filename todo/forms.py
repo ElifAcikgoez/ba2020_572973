@@ -10,3 +10,8 @@ class TaskForm(forms.ModelForm):
 		fields = '__all__'
 
 
+class NoteForm(forms.ModelForm):
+
+    class Meta:
+        model = Note
+        fields = ( 'text',)

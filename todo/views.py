@@ -1,5 +1,5 @@
 
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .forms import *
 from .models import  Task
 
@@ -70,3 +70,15 @@ def details(request, id):
     }
     return render(request, 'update_task.html', context)
 
+def add_note_to_post(request, pk):
+    post = get_object_or_404(Task, pk=pk)
+    if request.method == "POST":
+        form = NoteForm(request.POST)
+        if form.is_valid():
+            note = form.save(commit=False)
+            note.post = post
+            note.save()
+            return redirect('list')
+    else:
+        form = NoteForm()
+    return render(request, 'todo/add_note_to_post.html', {'form': form})

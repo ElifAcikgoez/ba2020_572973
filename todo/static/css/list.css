@@ -21,6 +21,12 @@ p{
 }
 
 
+
+h1{
+	font-size: 10pt;
+	color: #898989;
+
+}
 .center-column{
 	width:  800px ;
 	margin: 20px auto ;
@@ -50,4 +56,8 @@ p{
 
 	color: #ffffff;
 	}
+.comment {
+    margin: 20px 0px 20px 20px;
+}
+
 

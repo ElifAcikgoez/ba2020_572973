@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <html>
     <head>
         {% load static %}
@@ -10,23 +11,23 @@
         <div class="container-fluid" id="wrapper">
 	        <div class="row">
 		        <h1>
-			        Aufgabe bearbeiten
+			        Notiz hinzufügen
 
 		        </h1>
 	        </div>
         </div>
 
-    <form method="POST" action="">
-	    {% csrf_token %}
-	    {{form}}
-	    <button
+
+{% block content %}
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+         <button
                 type="submit"
                 class="btn btn-success"
                 id="add-btn">Bestätigen
         </button>
-
     </form>
-
+{% endblock %}
     </div>
  </div>
 </html>
