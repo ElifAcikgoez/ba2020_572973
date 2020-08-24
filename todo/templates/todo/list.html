@@ -97,11 +97,10 @@
 			    {% endif %}
 
 
+
                 {% block content %}
                     {% for note in task.notes.all %}
                     <h5>Notiz: {{ note.text }}</h5>
-                    {% empty %}
-
                     {% endfor %}
                 {% endblock %}
 

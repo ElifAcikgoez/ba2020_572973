@@ -12,4 +12,5 @@ urlpatterns = [
 	path('post/<int:pk>/note/', views.add_note_to_post, name='add_note_to_post'),
 
 
+
 ]
