@@ -96,13 +96,14 @@
 			    <a href="{% url 'complete' task.id %}"><li class="list-group">{{task}}</li></a>
 			    {% endif %}
 
-
-
-                {% block content %}
+            {% block content %}
                     {% for note in task.notes.all %}
                     <h5>Notiz: {{ note.text }}</h5>
                     {% endfor %}
                 {% endblock %}
+
+
+
 
             <div class="date">{{ task.created }}</div>
 

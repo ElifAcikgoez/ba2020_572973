@@ -82,4 +82,3 @@ def add_note_to_post(request, pk):
     else:
         form = NoteForm()
     return render(request, 'todo/add_note_to_post.html', {'form': form})
-
