@@ -3,12 +3,16 @@
 ## Inhalt
 1. [Allgemeine Informationen](#allgemeine-informationen)
 2. [Informationen zur Anwendung](#informationen-zur-anwendung)
+   > [Einloggen](#einloggen),<br>
    > [Todo hinzufügen](#todo-hinzufügen),<br>
+   > [Notiz hinzufügen](#notiz-hinzufügen),<br>
    > [Todo einzeln löschen](#todo-einzeln-löschen),<br>
    > [Todo als erledigt markieren](#todo-als-erledigt-markieren),<br>
    > [Todo bearbeiten](#todo-bearbeiten),<br>
    > [Alle Todos löschen](#alle-todos-löschen),<br>
    > [Nur erledigte todos löschen](#nur-erledigte-todos-löschen)<br>
+   
+   
 3. [Technologien](#technologien)
 4. [Installation](#installation)
 
@@ -16,21 +20,30 @@
 
 ## Allgemeine Informationen
 ***
-**Vision :**
-Eine To-Do app die für alle zugänglich ist und bei der Planung und Erledigung von Aufgaben unterstützt.<br> - Entwickelt um den überblick der zu erledigenden aufgaben strukturiert und visuell zu erfassen. -<br>
 <br>
-Die Webapp ist an alle gerichtet ,die Struktur in den Alltag einbringen möchten und soll die Möglichkeit bieten, alle anstehenden Aufgaben in eine Liste einzutragen um sie dann abarbeiten zu können. Somit soll keine Aufgabe , der für den aktuellen tag vorgenommen wurde ,vergessen werden.
+Die Webapp ist an alle gerichtet ,die Struktur in den Alltag einbringen möchten und soll die Möglichkeit bieten, alle anstehenden Aufgaben in eine Liste einzutragen um sie dann abarbeiten zu können. Somit soll keine Aufgabe , der für den aktuellen tag vorgenommen wurde ,vergessen werden.<br>
+**❗️Um die Webapp benutzen zu können muss erst eingeloggt werden❗️<br>**
+**Demo User : MaxMustermann<br>
+passwort : maxmaxmax<br>**
 
 :globe_with_meridians: Veröffentlicht auf :  https://todolistelif.pythonanywhere.com
 
 ## Informationen zur Anwendung
 ***
+#### Einloggen:
+
+
 #### Todo hinzufügen:
 Auf der Startseite befindet sich die Todo-Liste wo man das eintragen kann, was man erledigen möchte. Es können beliebig viele einträge gemacht werden.
 Um ein Todo hinzuzufügen muss das vorhaben in das Texteingabefeld eingetippt werden und anschließend auf den "Hinzufügen" button gegklickt werden: 
 ❗️Achtung: Eingabe nur bis zu 200 zeichen❗️
 
 ![](https://media.giphy.com/media/fYYgfCi1vb5Kfz4iU1/giphy.gif)
+
+
+#### Notiz hinzufügen:
+
+
 
 #### Todo einzeln löschen:
 Über dem todo-text befindet sich ein roter Mülltonenn-icon Button, womit man jedes einzelne todo löschen kann. Wenn man auf den icon klickt, erscheint eine neue "seite" und 
