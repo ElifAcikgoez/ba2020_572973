@@ -11,7 +11,7 @@
         <div class="container-fluid" id="wrapper">
 	        <div class="row">
 		        <h1>
-			        Notiz hinzufügen
+			        Notiz hinzufügen &#128221
 
 		        </h1>
 	        </div>
@@ -21,11 +21,13 @@
 {% block content %}
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
+        <center>
          <button
                 type="submit"
                 class="btn btn-success"
                 id="add-btn">Bestätigen
         </button>
+            </center>
     </form>
 {% endblock %}
     </div>
