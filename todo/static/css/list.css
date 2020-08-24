@@ -18,8 +18,8 @@ p{
 	color: #ffffff;
 	font-size:30pt;
 	font-family: "monospace", Courier, "lucida console";
+	text-align: center;
 }
-
 
 
 h1{
@@ -27,6 +27,7 @@ h1{
 	color: #898989;
 
 }
+
 .center-column{
 	width:  900px ;
 	margin: 20px auto ;
@@ -60,4 +61,17 @@ h1{
     margin: 20px 0px 20px 20px;
 }
 
+
+.glyphicon glyphicon-lock
+{
+	color: white;
+	size: auto;
+}
+
+em{
+	color: white;
+	text-align: center;
+
+
+}
 

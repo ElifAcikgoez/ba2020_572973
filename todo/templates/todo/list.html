@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html>
+<div>
 
+
+
+</div>
     <head>
         {% load static %}
         <link rel="stylesheet" href="{% static 'css/list.css' %}">
@@ -8,6 +11,23 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <center>
+         {% if user.is_authenticated %}
+        <p class="top-menu">Hallo {{ user.username }}</p>
+
+        <a href="{% url 'logout' %}" class="btn btn-danger btn-lg">
+          <span class="glyphicon glyphicon-log-out"></span> Log out
+        </a>
+
+    {% else %}
+        <p>&#10071 Bitte erst einloggen &#10071</p>
+         <a href="{% url 'login' %}" class="btn btn-light btn-lg">
+          <span class="glyphicon glyphicon-log-in"></span> Log in
+        </a>
+    {% endif %}
+            </center>
 
     </head>
     <div class="body">
@@ -18,6 +38,8 @@
                     <p>
                         WAS MÖCHTEST DU HEUTE ERLEDIGEN?
                     </p>
+
+
                 </div>
             </div>
 
@@ -88,5 +110,7 @@
 	    </div>
     </div>
  </div>
+<body>
 
+</body>
 </html>
