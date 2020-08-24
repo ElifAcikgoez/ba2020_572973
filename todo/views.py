@@ -18,7 +18,7 @@ def index(request):
 
 	context = {'tasks':tasks, 'form':form}
 	return render(request, 'todo/list.html', context)
-
+@login_required
 def updateTask(request, pk):
 	task = Task.objects.get(id=pk)
 
@@ -33,7 +33,7 @@ def updateTask(request, pk):
 	context = {'form':form}
 
 	return render(request, 'todo/update_task.html', context)
-
+@login_required
 def deleteTask(request, pk):
 	item = Task.objects.get(id=pk)
 
@@ -43,25 +43,25 @@ def deleteTask(request, pk):
 
 	context = {'item':item}
 	return render(request, 'todo/delete.html', context)
-
+@login_required
 def completeTodo(request, todo_id):
     todo = Task.objects.get(pk=todo_id)
     todo.complete = True
     todo.save()
 
     return redirect('list')
-
+@login_required
 def deletecompleted(request):
 	Task.objects.filter(complete__exact=True).delete()
 
 	return redirect('list')
-
+@login_required
 def deleteall(request):
     Task.objects.all().delete()
 
     return redirect('list')
 
-
+@login_required
 def details(request, id):
     todo = Task.objects.get(id=id)
 
@@ -69,7 +69,7 @@ def details(request, id):
         'todo':todo
     }
     return render(request, 'update_task.html', context)
-
+@login_required
 def add_note_to_post(request, pk):
     post = get_object_or_404(Task, pk=pk)
     if request.method == "POST":
