@@ -45,7 +45,7 @@ Um ein Todo hinzuzufügen muss das vorhaben in das Texteingabefeld eingetippt we
 
 
 #### Notiz hinzufügen:
-
+Es kann zu jedem einzelnen todo eine Notiz beigelegt werden. Dazu einfach erst ein todo zur Liste hinzufügen und dann über dem todo-text auf den "Notiz" Button klicken. Danach die gewünschte Notiz in das textfeld eingeben und auf den "Bestätigen" Button klicken. Leider kann die eingetragene Notiz nicht mehr gelöscht oder bearbeitet werden. 
 
 
 #### Todo einzeln löschen:
