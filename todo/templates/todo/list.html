@@ -71,15 +71,17 @@
 	    </div>
     </div>
 	    <div class="todo-list">
-
-
          {% for task in tasks %}
 		    <div class="item-row">
 
 			    <a class="btn btn-sm btn-dark" href="{% url 'update_task' task.id %}">Bearbeiten
                  <span class="glyphicon glyphicon-pencil"></span>   </a>
+
                 <a class="btn btn-dark" href="{% url 'add_note_to_post' pk=task.pk %}">Notiz
                 <span class="glyphicon glyphicon-pencil"></span>  </a>
+
+
+
 			    <a class="btn btn-sm btn-danger" href="{% url 'delete' task.id %}">
                 <span class="glyphicon glyphicon-trash"></span>
                 </a>
@@ -96,14 +98,14 @@
 
 
                 {% block content %}
-                    {% if user.is_authenticated %}
-                    {% endif %}
                     {% for note in task.notes.all %}
                     <h5>Notiz: {{ note.text }}</h5>
                     {% empty %}
 
                     {% endfor %}
                 {% endblock %}
+
+            <div class="date">{{ task.created }}</div>
 
 		    </div>
 
