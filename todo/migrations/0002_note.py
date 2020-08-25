@@ -21,6 +21,7 @@ class Migration(migrations.Migration):
                 ('created_date', models.DateTimeField(default=django.utils.timezone.now)),
                 ('approved_comment', models.BooleanField(default=False)),
                 ('post', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='notes', to='todo.task')),
+
             ],
         ),
     ]

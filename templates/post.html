@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/update_task.css' %}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    </head>
+ <div class="body">
+    <div class="center-column">
+        <div class="container-fluid" id="wrapper">
+	        <div class="row">
+		        <h1>
+			        Bild hinzufügen &#128221
+
+		        </h1>
+	        </div>
+        </div>
+
+{% block content %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <center>
+         <button
+                type="submit"
+                class="btn btn-success"
+                id="add-btn">Bestätigen
+        </button>
+            </center>
+    </form>
+{% endblock %}
+    </div>
+ </div>
+</html>

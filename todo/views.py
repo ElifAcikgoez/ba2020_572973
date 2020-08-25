@@ -1,9 +1,13 @@
 from django.forms import modelform_factory
 from django.shortcuts import render, redirect, get_object_or_404
+from django.urls import reverse_lazy
+from django.views.generic import CreateView, ListView
+from .models import Post
 from .forms import *
 from .models import  Task
 from django.contrib.auth.decorators import login_required
-@login_required
+
+
 def index(request):
 	tasks = Task.objects.all()
 
@@ -82,3 +86,13 @@ def add_note_to_post(request, pk):
     else:
         form = NoteForm()
     return render(request, 'todo/add_note_to_post.html', {'form': form})
+
+class CreatePostView(CreateView): # new
+    model = Post
+    form_class = PostForm
+    template_name = 'post.html'
+    success_url = reverse_lazy('list')
+
+#class HomePageView(ListView):
+ #   model = Post
+ #   template_name = 'home.html'

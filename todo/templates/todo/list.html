@@ -13,6 +13,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
+
+
+
         <center>
          {% if user.is_authenticated %}
         <p class="top-menu"> &#127881 Hallo {{ user.username }} &#127881</p>
@@ -38,8 +41,9 @@
                     <p>
                         WAS MÖCHTEST DU HEUTE ERLEDIGEN?
                     </p>
+                 <li class="nav-item">
 
-
+          </li>
                 </div>
             </div>
 
@@ -51,12 +55,15 @@
                     class="btn btn-dark"
                     id="add-btn">HINZUFÜGEN
             </button>
+
+
 	    </form>
 
        <div class="row t10">
 	    <div class="col-lg-12">
 		    <div class="btn-toolbar">
 			    <div class="btn-group">
+
 
                     <a href="{% url 'deletecomplete' %}"><button type="button" class=" btn btn-danger">
 					    <i class="glyphicon glyphicon-trash"></i> ERLEDIGTE LÖSCHEN
@@ -77,14 +84,24 @@
 			    <a class="btn btn-sm btn-dark" href="{% url 'update_task' task.id %}">Bearbeiten
                  <span class="glyphicon glyphicon-pencil"></span>   </a>
 
-                <a class="btn btn-dark" href="{% url 'add_note_to_post' pk=task.pk %}">Notiz
-                <span class="glyphicon glyphicon-pencil"></span>  </a>
-
+                 <a class="btn btn-dark" href="{% url 'add_note_to_post' pk=task.pk%}">Notiz hinzufügen  </a>
 
 
 			    <a class="btn btn-sm btn-danger" href="{% url 'delete' task.id %}">
                 <span class="glyphicon glyphicon-trash"></span>
                 </a>
+
+                <a class="btn btn-dark" href="{% url 'add_post'%}">Bild hinzufügen
+                  </a>
+
+
+
+
+
+            <ul>
+</ul>
+
+
 
 
 
@@ -96,11 +113,21 @@
 			    <a href="{% url 'complete' task.id %}"><li class="list-group">{{task}}</li></a>
 			    {% endif %}
 
+
+
             {% block content %}
+
                     {% for note in task.notes.all %}
                     <h5>Notiz: {{ note.text }}</h5>
                     {% endfor %}
+
+
                 {% endblock %}
+
+
+
+
+
 
 
 

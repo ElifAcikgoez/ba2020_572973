@@ -3,5 +3,6 @@ from .models import *
 
 admin.site.register(Task)
 admin.site.register(Note)
+admin.site.register(Post)
 
 

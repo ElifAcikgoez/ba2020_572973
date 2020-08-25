@@ -14,3 +14,9 @@ class NoteForm(forms.ModelForm):
     class Meta:
         model = Note
         fields = ('text',)
+
+class PostForm(forms.ModelForm):
+
+    class Meta:
+        model = Post
+        fields = ['title', 'cover',]
