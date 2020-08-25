@@ -4,49 +4,54 @@ from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView
 from .models import Post
 from .forms import *
-from .models import  Task
+from .models import Task
 from django.contrib.auth.decorators import login_required
 
 
 def index(request):
-	tasks = Task.objects.all()
+    tasks = Task.objects.all()
 
-	form = TaskForm()
+    form = TaskForm()
 
-	if request.method =='POST':
-		form = TaskForm(request.POST)
-		if form.is_valid():
-			form.save()
-		return redirect('/')
+    if request.method == 'POST':
+        form = TaskForm(request.POST)
+        if form.is_valid():
+            form.save()
+        return redirect('/')
+
+    context = {'tasks': tasks, 'form': form}
+    return render(request, 'todo/list.html', context)
 
 
-	context = {'tasks':tasks, 'form':form}
-	return render(request, 'todo/list.html', context)
 @login_required
 def updateTask(request, pk):
-	task = Task.objects.get(id=pk)
+    task = Task.objects.get(id=pk)
 
-	form = TaskForm(instance=task)
+    form = TaskForm(instance=task)
 
-	if request.method == 'POST':
-		form = TaskForm(request.POST, instance=task)
-		if form.is_valid():
-			form.save()
-			return redirect('/')
+    if request.method == 'POST':
+        form = TaskForm(request.POST, instance=task)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
 
-	context = {'form':form}
+    context = {'form': form}
 
-	return render(request, 'todo/update_task.html', context)
+    return render(request, 'todo/update_task.html', context)
+
+
 @login_required
 def deleteTask(request, pk):
-	item = Task.objects.get(id=pk)
+    item = Task.objects.get(id=pk)
 
-	if request.method == 'POST':
-		item.delete()
-		return redirect('/')
+    if request.method == 'POST':
+        item.delete()
+        return redirect('/')
 
-	context = {'item':item}
-	return render(request, 'todo/delete.html', context)
+    context = {'item': item}
+    return render(request, 'todo/delete.html', context)
+
+
 @login_required
 def completeTodo(request, todo_id):
     todo = Task.objects.get(pk=todo_id)
@@ -54,25 +59,32 @@ def completeTodo(request, todo_id):
     todo.save()
 
     return redirect('list')
+
+
 @login_required
 def deletecompleted(request):
-	Task.objects.filter(complete__exact=True).delete()
+    Task.objects.filter(complete__exact=True).delete()
 
-	return redirect('list')
+    return redirect('list')
+
+
 @login_required
 def deleteall(request):
     Task.objects.all().delete()
 
     return redirect('list')
 
+
 @login_required
 def details(request, id):
     todo = Task.objects.get(id=id)
 
     context = {
-        'todo':todo
+        'todo': todo
     }
     return render(request, 'update_task.html', context)
+
+
 @login_required
 def add_note_to_post(request, pk):
     post = get_object_or_404(Task, pk=pk)
@@ -87,12 +99,13 @@ def add_note_to_post(request, pk):
         form = NoteForm()
     return render(request, 'todo/add_note_to_post.html', {'form': form})
 
-class CreatePostView(CreateView): # new
+
+class CreatePostView(CreateView):  # new
     model = Post
     form_class = PostForm
     template_name = 'post.html'
     success_url = reverse_lazy('list')
 
-#class HomePageView(ListView):
- #   model = Post
- #   template_name = 'home.html'
+# class HomePageView(ListView):
+#   model = Post
+#   template_name = 'home.html'

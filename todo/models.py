@@ -11,7 +11,6 @@ class Task(models.Model):
 	def __str__(self):
 		return self.title
 
-
 class Note(models.Model):
     post = models.ForeignKey('todo.Task', on_delete=models.CASCADE, related_name='notes')
     author = models.CharField(max_length=200)
@@ -23,6 +22,7 @@ class Note(models.Model):
         self.approved_note = True
         self.save()
 
+
     def __str__(self):
         return self.text
 
@@ -30,6 +30,6 @@ class Post(models.Model):
     title = models.TextField()
     cover = models.ImageField(upload_to='images/')
 
-
     def __str__(self):
         return self.title
+
