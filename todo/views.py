@@ -7,8 +7,25 @@ from .forms import *
 from .models import Task
 from django.contrib.auth.decorators import login_required
 
+"""
+In der View schreiben wir die Logik der Anwendung. So werden Informationen aus dem Model
+ abgefragt und diese werden an ein Template weitergegeben.
+"""
+
 
 def index(request):
+    """
+    Diese Funktion sorgt dafür, dass die eingetragenen todos gespeichert und in der Liste erscheinen.
+    Es wird geprüft , ob die request methode die der Client getätigt hat ein POST-Request ist. Wenn ja,
+    dann wird der TaskForm als parameter der request.POST übergeben. Wenn das formular (if form.is_valid)
+    true (gültig) ist, wird es gespeichert und das Template (todo/list.html) wird zu einer fertigen
+    HTML-Seite zusammengesetzt("gerendert").
+
+    :param request: HTTP request des Clients
+    :type request:str
+    :return:Die komplette todo Liste
+    :rtype:html
+    """
     tasks = Task.objects.all()
 
     form = TaskForm()
@@ -25,10 +42,20 @@ def index(request):
 
 @login_required
 def updateTask(request, pk):
+    """
+    Die Funktion updateTask erstellt die die HTML seite für den gewünschten todo , den man bearbeiten/updaten möchte.
+
+    :param request: HTTP-Request des Clients
+    :type request: str
+    :param pk: Primary-key des zu bearbeitenden toDos
+    :type pk: int
+    :return: HTML Seite wo man den gewünschten todo bearbeiten und abspeichern kann
+    :rtype:html
+    """
     task = Task.objects.get(id=pk)
-
+    """var: task : Das genaue To-do was bearbeitet werden soll mit dem index des Primary-keys."""
     form = TaskForm(instance=task)
-
+    """var: form : Formular für das zu bearbeitende to-do. """
     if request.method == 'POST':
         form = TaskForm(request.POST, instance=task)
         if form.is_valid():
@@ -42,6 +69,16 @@ def updateTask(request, pk):
 
 @login_required
 def deleteTask(request, pk):
+    """
+    Diese Funktion ermöglicht es, den gewünschten  todo zu löschen.
+
+    :param request: HTTP-request des Clients
+    :type request:str
+    :param pk: Primary-key des zu löschenden toDos
+    :type pk:int
+    :return:HTML Seite wo man den gewünschten todo löschen  kann
+    :rtype:html
+    """
     item = Task.objects.get(id=pk)
 
     if request.method == 'POST':
@@ -54,6 +91,15 @@ def deleteTask(request, pk):
 
 @login_required
 def completeTodo(request, todo_id):
+    """
+    Diese Funktion setzt den complete Wert aus dem Model des todos ,welches default false ist, auf true.
+    :param request: HTTP-Request des Clients
+    :type request:str
+    :param todo_id: Die id von dem todo welches auf erledigt gesetzt sein soll
+    :type todo_id:int
+    :return:zurück zur list url
+    :rtype:str
+    """
     todo = Task.objects.get(pk=todo_id)
     todo.complete = True
     todo.save()
@@ -63,6 +109,14 @@ def completeTodo(request, todo_id):
 
 @login_required
 def deletecompleted(request):
+    """
+    Diese Funktion löscht die erledigten todos.
+
+    :param request:HTTP-request des client
+    :type request:str
+    :return:wieder auf die todo-liste
+    :rtype:str
+    """
     Task.objects.filter(complete__exact=True).delete()
 
     return redirect('list')
@@ -70,6 +124,14 @@ def deletecompleted(request):
 
 @login_required
 def deleteall(request):
+    """
+    Diese funktion löscht alle eingetragenen todos.
+
+    :param request: HTTP-Request des client
+    :type request: str
+    :return: Man wird wieder  auf die "start seite"(todo-liste) geleitet/redirected
+    :rtype: str
+    """
     Task.objects.all().delete()
 
     return redirect('list')
@@ -87,7 +149,19 @@ def details(request, id):
 
 @login_required
 def add_note_to_post(request, pk):
+    """
+    Diese Funktion fügt zu jedem todo eine notiz hinzu.
+
+    :var post: soll entweder
+    :param request: HTTP-request des client
+    :type request: str
+    :param pk: Primary Key des todos
+    :type pk: int
+    :return: Gibt die HTML seite zurück , wo man die Noitz zu dem todo mit dem bestimmten Primary-key eintragen kann.
+
+    """
     post = get_object_or_404(Task, pk=pk)
+
     if request.method == "POST":
         form = NoteForm(request.POST)
         if form.is_valid():
@@ -100,12 +174,10 @@ def add_note_to_post(request, pk):
     return render(request, 'todo/add_note_to_post.html', {'form': form})
 
 
-class CreatePostView(CreateView):  # new
+class CreatePostView(CreateView):
     model = Post
     form_class = PostForm
     template_name = 'post.html'
     success_url = reverse_lazy('list')
 
-# class HomePageView(ListView):
-#   model = Post
-#   template_name = 'home.html'
+

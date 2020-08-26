@@ -13,9 +13,5 @@ urlpatterns = [
 	path('complete/<todo_id>', views.completeTodo, name='complete'),
 	path('post/<int:pk>/note/', views.add_note_to_post, name='add_note_to_post'),
 	path('post/', CreatePostView.as_view(), name='add_post'),
-	#path('', HomePageView.as_view(), name='home'),
-
-#books
-
 ]
 
