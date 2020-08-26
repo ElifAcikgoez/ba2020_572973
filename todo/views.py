@@ -173,11 +173,21 @@ def add_note_to_post(request, pk):
         form = NoteForm()
     return render(request, 'todo/add_note_to_post.html', {'form': form})
 
+def post_list(request):
+    posts = Post.objects.all()
+    return render(request, 'post_list.html', {
+        'posts': posts
+    })
+
+def delete_post(request, pk):
+    if request.method == 'POST':
+        post = Post.objects.get(pk=pk)
+        post.delete()
+    return redirect('post_list')
 
 class CreatePostView(CreateView):
     model = Post
     form_class = PostForm
     template_name = 'post.html'
     success_url = reverse_lazy('list')
-
 
