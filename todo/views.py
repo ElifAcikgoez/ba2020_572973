@@ -1,5 +1,7 @@
+from django.contrib import messages
 from django.core.files.uploadhandler import FileUploadHandler
 from django.forms import modelform_factory
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView
@@ -28,14 +30,12 @@ def index(request):
     :rtype:html
     """
     tasks = Task.objects.all()
-
     form = TaskForm()
-
     if request.method == 'POST':
-        form = TaskForm(request.POST)
+        form = TaskForm(request.POST,request.FILES)
         if form.is_valid():
             form.save()
-        return redirect('/')
+        return HttpResponseRedirect('/')
 
     context = {'tasks': tasks, 'form': form}
     return render(request, 'todo/list.html', context)
@@ -194,4 +194,3 @@ class CreatePostView(CreateView):
     form_class = PostForm
     template_name = 'post.html'
     success_url = reverse_lazy('list')
-

@@ -43,7 +43,7 @@ class Post(models.Model):
 
     """
     title = models.TextField()
-    cover = models.ImageField(upload_to='images/')
+    cover = models.ImageField(upload_to='images/', null=True, blank=True)
 
     def __str__(self):
         return self.title

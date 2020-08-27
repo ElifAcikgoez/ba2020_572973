@@ -43,18 +43,18 @@
                 </div>
             </div>
 
-	    <form method="POST" action="/" enctype="multipart/form-data">
-		    {% csrf_token %}
-		    {{form.title}}
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.title }}
+         <button
+                type="submit"
+                class="btn btn-success"
+                id="add-btn">Hinzufügen
+        </button>
             {{ form.cover }}
+    </form>
 
-
-		    <button
-                    type="submit"
-                    class="btn btn-dark"
-                    id="add-btn">HINZUFÜGEN
-            </button>
-	    </form>
 
        <div class="row t10">
 	    <div class="col-lg-12">
