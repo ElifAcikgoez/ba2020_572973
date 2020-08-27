@@ -43,9 +43,12 @@
                 </div>
             </div>
 
-	    <form method="POST" action="/">
+	    <form method="POST" action="/" enctype="multipart/form-data">
 		    {% csrf_token %}
 		    {{form.title}}
+            {{ form.cover }}
+
+
 		    <button
                     type="submit"
                     class="btn btn-dark"
@@ -63,6 +66,8 @@
 
                      <a class="btn btn-dark" href="{% url 'add_post'%}">Bild hochladen
                     </a>
+
+
 
 
                     <a href="{% url 'deletecomplete' %}"><button type="button" class=" btn btn-danger">
@@ -94,7 +99,6 @@
                 </a>
 
 
-
 			    {% if task.complete == True %}
 
 			    <li class="list-group todo-completed">{{ task }}</li>
@@ -104,6 +108,14 @@
 			    {% endif %}
 
 
+
+            <td>
+            {% if task.cover %}
+              <img src="{{ task.cover.url }}" alt="{{ task.title }}" style="width:200px;">
+            {% else %}
+                  <span class="text-muted">No cover</span>
+            {% endif %}
+            </td>
 
                 {% block content %}
                     {% for note in task.notes.all %}

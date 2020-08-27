@@ -9,6 +9,7 @@ class TaskForm(forms.ModelForm):
     damit der Nutzer/in auch weiss wo einzutragen ist.
     """
     title = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Hier die Aufgabe eintragen...'}))
+   # cover = forms.ImageField(allow_empty_file=True)
 
     class Meta:
         """
