@@ -58,10 +58,10 @@ def updateTask(request, pk):
     form = TaskForm(instance=task)
     """var: form : Formular für das zu bearbeitende to-do. """
     if request.method == 'POST':
-        form = TaskForm(request.POST, instance=task)
+        form = TaskForm(request.POST, request.FILES,instance=task)
         if form.is_valid():
             form.save()
-            return redirect('/')
+            return HttpResponseRedirect('/')
 
     context = {'form': form}
 
