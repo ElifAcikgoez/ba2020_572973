@@ -107,8 +107,6 @@
 			    <a href="{% url 'complete' task.id %}"><li class="list-group">{{task}}</li></a>
 			    {% endif %}
 
-
-
             <td>
             {% if task.cover %}
               <img src="{{ task.cover.url }}" alt="{{ task.title }}" style="width:200px;">
