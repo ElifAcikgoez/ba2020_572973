@@ -5,7 +5,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView
-from .models import Post
+#from .models import Post
 from .forms import *
 from .models import Task
 from django.contrib.auth.decorators import login_required
@@ -172,49 +172,49 @@ def details(request, id):
     return render(request, 'update_task.html', context)
 
 
-@login_required
-def add_note_to_post(request, pk):
-    """
-    Diese Funktion fügt zu jedem todo eine notiz hinzu.
+#@login_required
+#def add_note_to_post(request, pk):
+ #   """
+  #  Diese Funktion fügt zu jedem todo eine notiz hinzu.
+#
+  #  :var post: soll entweder
+ #   :param request: HTTP-request des client
+   # :type request: str
+    #:param pk: Primary Key des todos
+    #:type pk: int
+    #:return: Gibt die HTML seite zurück , wo man die Noitz zu dem todo mit dem bestimmten Primary-key eintragen kann.
 
-    :var post: soll entweder
-    :param request: HTTP-request des client
-    :type request: str
-    :param pk: Primary Key des todos
-    :type pk: int
-    :return: Gibt die HTML seite zurück , wo man die Noitz zu dem todo mit dem bestimmten Primary-key eintragen kann.
+   # """
+    #post = get_object_or_404(Task, pk=pk)
+    #if request.method == "POST":
+     #   form = NoteForm(request.POST)
+      #  if form.is_valid():
+       #     note = form.save(commit=False)
+        #    note.post = post
 
-    """
-    post = get_object_or_404(Task, pk=pk)
-    if request.method == "POST":
-        form = NoteForm(request.POST)
-        if form.is_valid():
-            note = form.save(commit=False)
-            note.post = post
-
-            note.save()
-            return redirect('list')
-    else:
-        form = NoteForm()
-    return render(request, 'todo/add_note_to_post.html', {'form': form})
-
-
-def post_list(request):
-    posts = Post.objects.all()
-    return render(request, 'post_list.html', {
-        'posts': posts
-    })
+#            note.save()
+ #           return redirect('list')
+  #  else:
+   #     form = NoteForm()
+    #return render(request, 'todo/add_note_to_post.html', {'form': form})
 
 
-def delete_post(request, pk):
-    if request.method == 'POST':
-        post = Post.objects.get(pk=pk)
-        post.delete()
-    return redirect('post_list')
+#def post_list(request):
+ #   posts = Post.objects.all()
+  #  return render(request, 'post_list.html', {
+   #     'posts': posts
+    #})
 
 
-class CreatePostView(CreateView):
-    model = Post
-    form_class = PostForm
-    template_name = 'post.html'
-    success_url = reverse_lazy('list')
+#def delete_post(request, pk):
+ #   if request.method == 'POST':
+  #      post = Post.objects.get(pk=pk)
+   #     post.delete()
+    #return redirect('post_list')
+
+
+#class CreatePostView(CreateView):
+ #   model = Post
+  #  form_class = PostForm
+   # template_name = 'post.html'
+    #success_url = reverse_lazy('list')

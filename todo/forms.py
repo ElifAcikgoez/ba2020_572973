@@ -19,29 +19,29 @@ class TaskForm(forms.ModelForm):
         fields = '__all__'
 
 
-class NoteForm(forms.ModelForm):
-    """
-    NoteForm ist der name des Forumulars für die Notizen und ist ein ModelForm(forms.Modelform)
-    """
-    class Meta:
-        """
-         mit  class Meta  sagen wir Django, welches Model benutzt werden soll, um das Formular zu erstellen (model = Note).
-         Das Formular soll das textfeld sichtbar machen.
-        """
+#class NoteForm(forms.ModelForm):
+ #   """
+  #  NoteForm ist der name des Forumulars für die Notizen und ist ein ModelForm(forms.Modelform)
+   # """
+    #class Meta:
+     #   """
+      #   mit  class Meta  sagen wir Django, welches Model benutzt werden soll, um das Formular zu erstellen (model = Note).
+       #  Das Formular soll das textfeld sichtbar machen.
+        #"""
 
-        model = Note
-        fields = ('text','post')
+        #model = Note
+        #fields = ('text','post')
 
 
-class PostForm(forms.ModelForm):
-    """
-    PostForm ist der name des Forumulars für die Notizen und ist ein ModelForm(forms.Modelform)
-    """
-    class Meta:
-        """
-        mit  class Meta  sagen wir Django, welches Model benutzt werden soll, um das Formular zu erstellen (model = Post).
-         Das Formular soll das titel eingabefeld und das upload feld für das Bild  sichtbar machen.
-        """
-        model = Post
-        fields = ['title', 'cover', ]
+#class PostForm(forms.ModelForm):
+ #   """
+   # PostForm ist der name des Forumulars für die Notizen und ist ein ModelForm(forms.Modelform)
+  #  """
+    #class Meta:
+     #   """
+       # mit  class Meta  sagen wir Django, welches Model benutzt werden soll, um das Formular zu erstellen (model = Post).
+      #   Das Formular soll das titel eingabefeld und das upload feld für das Bild  sichtbar machen.
+        #"""
+        #model = Post
+        #fields = ['title', 'cover', ]
 
