@@ -83,16 +83,19 @@
 	    </div>
     </div>
 	    <div class="todo-list">
+
          {% for task in tasks %}
 		    <div class="item-row">
-
 
 
 			    <a class="btn btn-sm btn-dark" href="{% url 'update_task' task.id %}">Bearbeiten
                  <span class="glyphicon glyphicon-pencil"></span>   </a>
 
-                <a class="btn btn-dark" href="{% url 'add_note_to_post' pk=task.pk %}">Notiz hinzufügen
+
+                <a class="btn btn-dark" href="{% url 'updatenotiz' task.id %}">Notiz
+                    <span class="glyphicon glyphicon-pencil"></span>
                 </a>
+
 
 			    <a class="btn btn-sm btn-danger" href="{% url 'delete' task.id %}">
                 <span class="glyphicon glyphicon-trash"></span>
@@ -102,31 +105,46 @@
 			    {% if task.complete == True %}
 
 			    <li class="list-group todo-completed">{{ task }}</li>
+
 			    {% else %}
 
 			    <a href="{% url 'complete' task.id %}"><li class="list-group">{{task}}</li></a>
 			    {% endif %}
 
+           <!-- {% block content %}
+                    {% for note in task.notes.all %}
+                    <h5>Notiz: {{ note.text }}</h5>
+
+                    {% endfor %}-->
+
+
+
+               <td>
+            {% if task.note %}
+             <h5>Note: {{ task.note }}</h5>
+            {% else %}
+                  <span class="text-muted"></span>
+            {% endif %}
+            </td>
+
+                {% endblock %}
+
             <td>
             {% if task.cover %}
               <img src="{{ task.cover.url }}" alt="{{ task.title }}" style="width:200px;">
             {% else %}
-                 <!-- <span class="text-muted">kein Bild</span>-->
+                  <span class="text-muted"></span>
             {% endif %}
             </td>
 
-                {% block content %}
-                    {% for note in task.notes.all %}
-                    <h5>Notiz: {{ note.text }}</h5>
-                    {% endfor %}
 
-                {% endblock %}
 
             <div class="date">{{ task.created }}</div>
 
 		    </div>
 
          {% endfor %}
+
 
 	    </div>
     </div>

@@ -10,10 +10,11 @@ class Task(models.Model):
     """
     Vorlage für die Todos, nach welcher die Taskobjekte erstellt werden.
     """
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=200,blank=True)
     complete = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
     cover = models.ImageField(upload_to='images/',blank=True,)
+    note = models.TextField(max_length=100,blank=True)
 
     def __str__(self):
         return self.title
@@ -24,6 +25,7 @@ class Note(models.Model):
     Vorlage für die Notizen, nach welcher die Noteobjekte erstellt werden.
     """
     post = models.ForeignKey('todo.Task', on_delete=models.CASCADE, related_name='notes')
+
     author = models.CharField(max_length=200)
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)

@@ -15,7 +15,9 @@ urlpatterns = [
 	path('post/', CreatePostView.as_view(), name='add_post'),
 	path('posts/', views.post_list, name='post_list'),
 	path('posts/<int:pk>/', views.delete_post, name='delete_post'),
-	#path('task/upload/', views.upload_pic, name='upload_pic'),
+	path('updatenotiz/<str:pk>/', views.updatenotiz, name="updatenotiz"),
+
+
 
 
 ]

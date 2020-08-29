@@ -28,8 +28,9 @@ class NoteForm(forms.ModelForm):
          mit  class Meta  sagen wir Django, welches Model benutzt werden soll, um das Formular zu erstellen (model = Note).
          Das Formular soll das textfeld sichtbar machen.
         """
+
         model = Note
-        fields = ('text',)
+        fields = ('text','post')
 
 
 class PostForm(forms.ModelForm):
