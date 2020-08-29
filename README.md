@@ -24,7 +24,7 @@
 Die Webapp ist an alle gerichtet ,die Struktur in den Alltag einbringen möchten und soll die Möglichkeit bieten, alle anstehenden Aufgaben in eine Liste einzutragen um sie dann abarbeiten zu können. Somit soll keine Aufgabe , der für den aktuellen tag vorgenommen wurde ,vergessen werden.<br>
 <br>
 <b>❗️Um die Webapp benutzen zu können muss erst eingeloggt werden❗️<br>
-Demo User : MaxMustermann<br>
+Demo User : Maxmustermann<br>
 passwort : maxmaxmax<br></b>
 <br>
 :globe_with_meridians: Veröffentlicht auf :  https://todolistelif.pythonanywhere.com
@@ -33,7 +33,7 @@ passwort : maxmaxmax<br></b>
 ***
 #### Einloggen:
 Bitte zum testen/ausprobieren der Webapp den Demo User verwenden. <br>
-Demo User : MaxMustermann<br>
+Demo User : Maxmustermann<br>
 passwort : maxmaxmax<br>
 
 #### Todo hinzufügen:
