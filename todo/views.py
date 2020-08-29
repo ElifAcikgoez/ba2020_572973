@@ -15,7 +15,7 @@ In der View schreiben wir die Logik der Anwendung. So werden Informationen aus d
  abgefragt und diese werden an ein Template weitergegeben.
 """
 
-
+@login_required
 def index(request):
     """
     Diese Funktion sorgt dafür, dass die eingetragenen todos gespeichert und in der Liste erscheinen.
@@ -66,7 +66,7 @@ def updateTask(request, pk):
     context = {'form': form}
 
     return render(request, 'todo/update_task.html', context)
-
+@login_required
 def updatenotiz(request, pk):
     """
     Die Funktion updateTask erstellt die die HTML seite für den gewünschten todo , den man bearbeiten/updaten möchte.
