@@ -4,8 +4,8 @@
 1. [Allgemeine Informationen](#allgemeine-informationen)
 2. [Informationen zur Anwendung](#informationen-zur-anwendung)
    > [Einloggen](#einloggen),<br>
-   > [Todo hinzufügen](#todo-hinzufügen),<br>
-   > [Notiz hinzufügen](#notiz-hinzufügen),<br>
+   > [Todo und Bild hinzufügen](#todo-und-bild-hinzufügen),<br>
+   > [Notiz hinzufügen und bearbeiten](#notiz-hinzufügen-und-bearbeiten),<br>
    > [Todo einzeln löschen](#todo-einzeln-löschen),<br>
    > [Todo als erledigt markieren](#todo-als-erledigt-markieren),<br>
    > [Todo bearbeiten](#todo-bearbeiten),<br>
@@ -24,28 +24,29 @@
 Die Webapp ist an alle gerichtet ,die Struktur in den Alltag einbringen möchten und soll die Möglichkeit bieten, alle anstehenden Aufgaben in eine Liste einzutragen um sie dann abarbeiten zu können. Somit soll keine Aufgabe , der für den aktuellen tag vorgenommen wurde ,vergessen werden.<br>
 <br>
 <b>❗️Um die Webapp benutzen zu können muss erst eingeloggt werden❗️<br>
-Demo User : MaxMustermann<br>
+Demo User : Maxmustermann<br>
 passwort : maxmaxmax<br></b>
 <br>
-:globe_with_meridians: Veröffentlicht auf :  https://todolistelif.pythonanywhere.com
+:globe_with_meridians: Veröffentlicht auf : https://elifacikgoeztodolist.pythonanywhere.com
 
 ## Informationen zur Anwendung
 ***
 #### Einloggen:
 Bitte zum testen/ausprobieren der Webapp den Demo User verwenden. <br>
-Demo User : MaxMustermann<br>
+Demo User : Maxmustermann<br>
 passwort : maxmaxmax<br>
 
-#### Todo hinzufügen:
-Auf der Startseite befindet sich die Todo-Liste wo man das eintragen kann, was man erledigen möchte. Es können beliebig viele einträge gemacht werden.
-Um ein Todo hinzuzufügen muss das vorhaben in das Texteingabefeld eingetippt werden und anschließend auf den "Hinzufügen" button gegklickt werden: 
+#### Todo und Bild hinzufügen:
+Auf der Startseite befindet sich die Todo-Liste wo man das eintragen kann, was man erledigen möchte. Es können beliebig viele einträge gemacht werden und jeweils ein Bild hochgeladen werden.
+Um ein Todo hinzuzufügen muss das vorhaben in das Texteingabefeld eingetippt werden. Falls Sie ein Bild hochladen wollen einfach die datei auswählen und anschließend auf den "Hinzufügen" button klicken : 
 ❗️Achtung: Eingabe nur bis zu 200 zeichen❗️
 
 
 
 
-#### Notiz hinzufügen:
-Es kann zu jedem einzelnen todo eine Notiz beigelegt werden. Dazu einfach erst ein todo zur Liste hinzufügen und dann über dem todo-text auf den "Notiz" Button klicken. Danach die gewünschte Notiz in das textfeld eingeben und auf den "Bestätigen" Button klicken. Leider kann die eingetragene Notiz nicht mehr gelöscht oder bearbeitet werden. 
+#### Notiz hinzufügen und bearbeiten:
+Es kann zu jedem einzelnen todo eine Notiz beigelegt werden. Dazu einfach erst ein todo zur Liste hinzufügen und dann über den todo-text auf den "Notiz" Button klicken. Danach die gewünschte Notiz in das textfeld eingeben und auf den "Bestätigen" Button klicken. Wenn man die Notiz umbennen möchte, einfach nochmal auf den button klicken und die neue Notiz eingeben.
+
 
 
 #### Todo einzeln löschen:
@@ -61,7 +62,7 @@ Man kann direkt auf den Todo-text klicken , somit wird der todo durchgestrichen 
 
 #### Todo bearbeiten:
 Auf den dunkelgrauen "Bearbeiten" Button mit dem stift-icon über dem gewünschten todo-text klicken.
-Der eingetragene todo kann im nachhinein umbenannt werden ,  ein hacken bei "Complete" gesetzt werden wenn es erledigt ist oder der hacken kann rausgenommen werden wenn die aufgabe doch nicht erledigt worden ist. Wenn der hacken gesetzt wurde, erscheint der todo-text auf der startseite als durchgestrichen und wenn der hacken raus ist , ist der text wieder normal.
+Der eingetragene todo kann im nachhinein umbenannt werden ,  ein hacken bei "Complete" gesetzt werden wenn es erledigt ist oder der hacken kann rausgenommen werden wenn die aufgabe doch nicht erledigt worden ist. Wenn der hacken gesetzt wurde, erscheint der todo-text auf der startseite als durchgestrichen und wenn der hacken raus ist , ist der text wieder normal. Außerdem kann im nach hinein noch ein Bild hochgeladen werden, oder falls schon eins hochgeladen worden ist kann man diese entfernen oder stattdessen ein anderes hochladen. Die einegtargenen Notiz kann von hier aus auch bearbeitet werden. 
 
 
 
