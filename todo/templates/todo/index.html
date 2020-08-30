@@ -13,37 +13,6 @@
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-        <center>
-         {% if user.is_authenticated %}
-        <p class="top-menu"> &#127881 Hallo {{ user.username }} &#127881</p>
-
-        <a href="{% url 'logout' %}" class="btn btn-danger btn-lg">
-          <span class="glyphicon glyphicon-log-out"></span> Log out
-        </a>
-
-    {% else %}
-        <p>&#10071 Bitte erst einloggen &#10071</p>
-         <a href="{% url 'login' %}" class="btn btn-light btn-lg">
-          <span class="glyphicon glyphicon-log-in"></span> Log in
-        </a>
-    {% endif %}
-    </center>
-
-    {% block content %}
-  <div class="row">
-    <div class="col-md-6" style="margin: 0 auto;">
-      <form action="{% url 'searchdata' %}">
-          <mark for="query">Search By Title</mark>
-        <input type="search" class="form-control" name="query" id="query">
-        <button type="submit" class="btn btn-success" style="display: block;margin: 1rem auto;">Search</button>
-      </form>
-    </div>
-  </div>
-
-
-
-
     </head>
     <div class="body">
         <div class="center-column">
@@ -51,7 +20,7 @@
 	            <div class="row">
 
                     <p>
-                        WAS MÖCHTEST DU HEUTE ERLEDIGEN?
+                        Suchergebnisse
                     </p>
 
 
@@ -62,10 +31,12 @@
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.title }}
-         <button
-                type="submit"
-                class="btn btn-success"
-                id="add-btn">Hinzufügen
+        <button
+
+                        type="submit"
+                        class="btn btn-light"
+                        id="add-btn">
+                        <a href="{% url 'list' %}" >Zurück zur Liste</a>
         </button>
             {{ form.cover }}
     </form>
@@ -76,16 +47,6 @@
 		    <div class="btn-toolbar">
 			    <div class="btn-group">
 
-
-
-                    <a href="{% url 'deletecomplete' %}"><button type="button" class=" btn btn-danger">
-					    <i class="glyphicon glyphicon-trash"></i> ERLEDIGTE LÖSCHEN
-				    </button></a>
-				    </div>
-			    <div class="btn-group">
-				    <a href="{% url 'deleteall' %}"><button type="button" class="btn btn-danger">
-					    <i class="glyphicon glyphicon-trash"></i> ALLE LÖSCHEN
-				    </button></a>
 			    </div>
 		    </div>
 	    </div>
@@ -148,7 +109,7 @@
 
          {% endfor %}
 
- {% endblock %}
+
 	    </div>
     </div>
  </div>

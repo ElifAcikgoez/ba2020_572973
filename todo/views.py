@@ -69,19 +69,18 @@ def updateTask(request, pk):
 @login_required
 def updatenotiz(request, pk):
     """
-    Die Funktion updateTask erstellt die die HTML seite für den gewünschten todo , den man bearbeiten/updaten möchte.
+    Die Funktion updatenotiz erstellt die die HTML seite für den gewünschten todo , den man eine notiz hinzufügen möchte.
 
     :param request: HTTP-Request des Clients
     :type request: str
-    :param pk: Primary-key des zu bearbeitenden toDos
+    :param pk: Primary-key des  toDos wo man die notiz hinzufügen möchte
     :type pk: int
-    :return: HTML Seite wo man den gewünschten todo bearbeiten und abspeichern kann
+    :return: HTML Seite wo man den gewünschten todo den notiz text eingeben kann
     :rtype:html
     """
     task = Task.objects.get(id=pk)
-    """var: task : Das genaue To-do was bearbeitet werden soll mit dem index des Primary-keys."""
     form = TaskForm(instance=task)
-    """var: form : Formular für das zu bearbeitende to-do. """
+
     if request.method == 'POST':
         form = TaskForm(request.POST, request.FILES, instance=task)
         if form.is_valid():
@@ -171,6 +170,13 @@ def details(request, id):
     }
     return render(request, 'update_task.html', context)
 
+@login_required
+def searchdata(request):
+    q = request.GET['query']
+    mydictionary = {
+        "tasks" : Task.objects.filter(title__contains=q)
+    }
+    return render(request,'todo/index.html',context=mydictionary)
 
 #@login_required
 #def add_note_to_post(request, pk):

@@ -16,6 +16,7 @@ urlpatterns = [
 	#path('posts/', views.post_list, name='post_list'),
 	#path('posts/<int:pk>/', views.delete_post, name='delete_post'),
 	path('updatenotiz/<str:pk>/', views.updatenotiz, name="updatenotiz"),
+	path('searchdata', views.searchdata, name='searchdata'),
 
 
 
