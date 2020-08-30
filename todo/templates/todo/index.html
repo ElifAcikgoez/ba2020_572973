@@ -1,9 +1,6 @@
 
  <!DOCTYPE html>
 <div>
-
-
-
 </div>
     <head>
         {% load static %}
@@ -17,40 +14,25 @@
     <div class="body">
         <div class="center-column">
             <div class="container-fluid" id="wrapper">
-	            <div class="row">
 
+
+                    <center>
                     <p>
                         Suchergebnisse
                     </p>
 
-
-                </div>
-            </div>
-
-
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.title }}
-        <button
+                        <button
 
                         type="submit"
                         class="btn btn-light"
                         id="add-btn">
                         <a href="{% url 'list' %}" >Zurück zur Liste</a>
         </button>
-            {{ form.cover }}
-    </form>
+                    </center>
 
 
-       <div class="row t10">
-	    <div class="col-lg-12">
-		    <div class="btn-toolbar">
-			    <div class="btn-group">
+            </div>
 
-			    </div>
-		    </div>
-	    </div>
-    </div>
 	    <div class="todo-list">
 
          {% for task in tasks %}
@@ -113,7 +95,5 @@
 	    </div>
     </div>
  </div>
-<body>
 
-</body>
 </html>
