@@ -14,7 +14,7 @@ class Task(models.Model):
     complete = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
     cover = models.ImageField(upload_to='images/',blank=True,)
-    note = models.TextField(max_length=100,blank=True)
+    note = models.TextField(max_length=300,blank=True)
 
     def __str__(self):
         return self.title
