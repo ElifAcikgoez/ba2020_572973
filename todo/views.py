@@ -172,6 +172,10 @@ def details(request, id):
 
 @login_required
 def searchdata(request):
+    """
+    Mit dieser Funktion kann man nach beliebigen wörtern suchen und den passenden todo dazu sich anzeigen lassen.
+    Die Funktion sucht in dem todo-titel nach dem gesuchten wort.
+    """
     q = request.GET['query']
     mydictionary = {
         "tasks" : Task.objects.filter(title__contains=q)
