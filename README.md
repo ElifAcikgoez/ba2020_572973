@@ -21,7 +21,7 @@
 ## Allgemeine Informationen
 ***
 <br>
-Die Webapp ist an alle gerichtet ,die Struktur in den Alltag einbringen möchten und soll die Möglichkeit bieten, alle anstehenden Aufgaben in eine Liste einzutragen um sie dann abarbeiten zu können. Somit soll keine Aufgabe , der für den aktuellen tag vorgenommen wurde ,vergessen werden.<br>
+Die Webapp ist an alle gerichtet, die Struktur in den Alltag einbringen möchten und soll die Möglichkeit bieten, alle anstehenden Aufgaben in eine Liste einzutragen um sie dann abarbeiten zu können. Somit soll keine Aufgabe, die für den aktuellen Tag vorgenommen wurde, vergessen werden.<br>
 <br>
 <b>❗️Um die Webapp benutzen zu können muss erst eingeloggt werden❗️<br>
 Demo User : Maxmustermann<br>
@@ -34,35 +34,35 @@ passwort : maxmaxmax<br></b>
 #### Einloggen:
 Bitte zum testen/ausprobieren der Webapp den Demo User verwenden. <br>
 Demo User : Maxmustermann<br>
-passwort : maxmaxmax<br>
+Passwort : maxmaxmax<br>
 
 #### Todo und Bild hinzufügen:
-Auf der Startseite befindet sich die Todo-Liste wo man das eintragen kann, was man erledigen möchte. Es können beliebig viele einträge gemacht werden und jeweils ein Bild hochgeladen werden.
-Um ein Todo hinzuzufügen muss das vorhaben in das Texteingabefeld eingetippt werden. Falls Sie ein Bild hochladen wollen einfach die datei auswählen und anschließend auf den "Hinzufügen" button klicken : 
+Auf der Startseite befindet sich die Todo-Liste wo man das eintragen kann, was man erledigen möchte. Es können beliebig viele Einträge gemacht werden und jeweils ein Bild hochgeladen werden.
+Um ein Todo hinzuzufügen muss das vorhaben in das Texteingabefeld eingetippt werden. Falls Sie ein Bild hochladen wollen einfach die Datei auswählen und anschließend auf den "Hinzufügen" Button klicken : 
 ❗️Achtung: Eingabe nur bis zu 200 zeichen❗️
 
 
 
 
 #### Notiz hinzufügen und bearbeiten:
-Es kann zu jedem einzelnen todo eine Notiz beigelegt werden. Dazu einfach erst ein todo zur Liste hinzufügen und dann über den todo-text auf den "Notiz" Button klicken. Danach die gewünschte Notiz in das textfeld eingeben und auf den "Bestätigen" Button klicken. Wenn man die Notiz umbennen möchte, einfach nochmal auf den button klicken und die neue Notiz eingeben.
+Es kann zu jedem einzelnen Todo eine Notiz beigelegt werden. Dazu einfach erst ein Todo zur Liste hinzufügen und dann über den Todo-Text auf den "Notiz" Button klicken. Danach die gewünschte Notiz in das Textfeld eingeben und auf den "Bestätigen" Button klicken. Wenn man die Notiz umbenennen möchte, einfach nochmal auf den Button klicken und die neue Notiz eingeben.
 
 
 
 #### Todo einzeln löschen:
-Über dem todo-text befindet sich ein roter Mülltonenn-icon Button, womit man jedes einzelne todo löschen kann. Wenn man auf den icon klickt, erscheint eine neue "seite" und 
-wird gefragt ob man das gewählte wirklich löschen möchte. Es kann mit "Ja" bestätigt werden oder mit "Abbrechen" zurück zur startseite geleitet werden :
+Über dem Todo-Text befindet sich ein roter Mülltonenn-Icon Button, womit man jedes einzelne Todo löschen kann. Wenn man auf den Icon klickt, erscheint eine neue "Seite" und man
+wird gefragt, ob man das gewählte wirklich löschen möchte. Es kann mit "Ja" bestätigt werden oder mit "Abbrechen" zurück zur Startseite geleitet werden:
 
 
 
 #### Todo als erledigt markieren:
-Man kann direkt auf den Todo-text klicken , somit wird der todo durchgestrichen und als "erledigt" abgespeichert.
+Man kann direkt auf den Todo-Text klicken, somit wird der Todo durchgestrichen und als "erledigt" abgespeichert.
 
 
 
 #### Todo bearbeiten:
-Auf den dunkelgrauen "Bearbeiten" Button mit dem stift-icon über dem gewünschten todo-text klicken.
-Der eingetragene todo kann im nachhinein umbenannt werden ,  ein hacken bei "Complete" gesetzt werden wenn es erledigt ist oder der hacken kann rausgenommen werden wenn die aufgabe doch nicht erledigt worden ist. Wenn der hacken gesetzt wurde, erscheint der todo-text auf der startseite als durchgestrichen und wenn der hacken raus ist , ist der text wieder normal. Außerdem kann im nach hinein noch ein Bild hochgeladen werden, oder falls schon eins hochgeladen worden ist kann man diese entfernen oder stattdessen ein anderes hochladen. Die einegtargenen Notiz kann von hier aus auch bearbeitet werden. 
+Auf den dunkelgrauen "Bearbeiten" Button mit dem Stift-Icon über dem gewünschten Todo-Text klicken.
+Der eingetragene Todo kann im nachhinein umbenannt werden, ein Haken bei "Complete" gesetzt werden wenn es erledigt ist oder der Haken kann rausgenommen werden wenn die Aufgabe doch nicht erledigt worden ist. Wenn der Haken gesetzt wurde, erscheint der Todo-Text auf der Startseite als durchgestrichen und wenn der Haken raus ist, ist der Text wieder normal. Außerdem kann im nachhinein noch ein Bild hochgeladen werden, oder falls schon eins hochgeladen worden ist kann man dieses entfernen oder stattdessen ein anderes hochladen. Die eingetragene Notiz kann von hier aus auch bearbeitet werden. 
 
 
 
@@ -80,7 +80,7 @@ Unter dem Eingabetextfeld auf den roten Button "ERLEDIGTE LÖSCHEN" klicken.
 
 ## Technologien
 ***
-Eine Liste mit den verwendeten technologien in diesem Projekt:
+Eine Liste mit den verwendeten Technologien in diesem Projekt:
 * Verwendete Entwicklungsumgebung : [PyCharm Professional Edition Version](https://www.jetbrains.com/de-de/pycharm/) 2020.1
 * [Python](https://www.python.org): Version 3.7
 * [Django](https://www.djangoproject.com): Version 3.1
@@ -91,7 +91,7 @@ Eine Liste mit den verwendeten technologien in diesem Projekt:
 
 ## Installation 
 ***
-Kleines Intro zur installation :octocat: :
+Kleines Intro zur Installation :octocat: :
 ```
 $ git clone https://github.com/ElifAcikgoez/ba2020_572973.git
 $ (myvenv) ~/Mustermann$ python manage.py runserver
