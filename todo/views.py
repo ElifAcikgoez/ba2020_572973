@@ -18,7 +18,7 @@ In der View schreiben wir die Logik der Anwendung. So werden Informationen aus d
 @login_required
 def index(request):
     """
-    Diese Funktion sorgt dafür, dass die eingetragenen todos gespeichert und in der Liste erscheinen.
+    Diese Funktion sorgt dafür, dass die eingetragenen todos gespeichert werden und in der Liste erscheinen.
     Es wird geprüft , ob die request methode die der Client getätigt hat ein POST-Request ist. Wenn ja,
     dann wird der TaskForm als parameter der request.POST übergeben. Wenn das formular (if form.is_valid)
     true (gültig) ist, wird es gespeichert und das Template (todo/list.html) wird zu einer fertigen
