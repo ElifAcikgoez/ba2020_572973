@@ -24,8 +24,8 @@
 <br>
 Die Webapp ist an alle gerichtet, die Struktur in den Alltag einbringen möchten und soll die Möglichkeit bieten, alle anstehenden Aufgaben in eine Liste einzutragen um sie dann abarbeiten zu können. Somit soll keine Aufgabe, die für den aktuellen Tag vorgenommen wurde, vergessen werden.<br>
 <br>
-<b>❗️Um die Webapp benutzen zu können muss erst Registriert werden werden❗️<br>
-Wenn Sie noch keinen account haben können sie dies ganz einfach erstellen indem Sie die Anweisung auf der Login Seite befolgen.
+<b>❗️Um die Webapp benutzen zu können muss erst Registriert werden werden❗️<b>
+Wenn Sie noch keinen Account haben können sie dies ganz einfach erstellen indem Sie die Anweisung auf der Login Seite befolgen.
 <br>
 :globe_with_meridians: Veröffentlicht auf : https://elifacikgoeztodolist.pythonanywhere.com
 
