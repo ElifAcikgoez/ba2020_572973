@@ -24,9 +24,9 @@
 <br>
 Die Webapp ist an alle gerichtet, die Struktur in den Alltag einbringen möchten und soll die Möglichkeit bieten, alle anstehenden Aufgaben in eine Liste einzutragen um sie dann abarbeiten zu können. Somit soll keine Aufgabe, die für den aktuellen Tag vorgenommen wurde, vergessen werden.<br>
 <br>
-<b>❗️Um die Webapp benutzen zu können muss erst Registriert werden werden❗️</b>
+<b>❗️Um die Webapp benutzen zu können muss erst Registriert werden❗️</b>
 <br>
-Wenn Sie noch keinen Account haben können sie dies ganz einfach erstellen indem Sie die Anweisung auf der Login Seite befolgen.
+Wenn Sie noch keinen Account haben können Sie dies ganz einfach erstellen indem Sie die Anweisung auf der Login Seite befolgen.
 <br>
 :globe_with_meridians: Veröffentlicht auf : https://elifacikgoeztodolist.pythonanywhere.com
 
@@ -34,7 +34,7 @@ Wenn Sie noch keinen Account haben können sie dies ganz einfach erstellen indem
 ***
 #### Einloggen und Registrieren:
 Zum Registrieren die Anweisung auf der Login Seite (Startseite) befolgen.
-Zum Einloggen bitte einfach Benutzername und Passowort in die vorgegebenen Eingabefelder eingeben. <br>
+Zum Einloggen bitte einfach Benutzername und Passwort in die vorgegebenen Eingabefelder eingeben. <br>
 <br>❗️ACHTUNG❗️ <br>
 Registrieren: Nachdem der gewählte Benutzername, Passwort , das wiederholte Passwort eingetippt und der Bestätigen Button geklickt wurde, wird man direkt zurück auf die 
 Login Seite geleitet und muss dann nur noch seine registrierten Daten eingeben. Danach gelangt man zur Todo-Liste.
