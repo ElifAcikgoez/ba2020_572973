@@ -32,10 +32,10 @@ Wenn Sie noch keinen Account haben können sie dies ganz einfach erstellen indem
 ## Informationen zur Anwendung
 ***
 #### Einloggen und Registrieren:
-Zum Einloggen bitte einfach Benutzername und Passowort in die vorgegebenen Eingabefelder eingeben. <br>
 Zum Registrieren die Anweisung auf der Login Seite (Startseite) befolgen.
+Zum Einloggen bitte einfach Benutzername und Passowort in die vorgegebenen Eingabefelder eingeben. <br>
 <br>❗️ACHTUNG❗️ <br>
-Nachdem der gewählte Benutzername, Passwort , das wiederholte Passwort eingetippt und der Bestätigen Button geklickt wurde, wird man zurück auf die 
+Registrieren: Nachdem der gewählte Benutzername, Passwort , das wiederholte Passwort eingetippt und der Bestätigen Button geklickt wurde, wird man direkt zurück auf die 
 Login Seite geleitet und muss dann nur noch seine registrierten Daten eingeben. Danach gelangt man zur Todo-Liste.
  <br>
 
