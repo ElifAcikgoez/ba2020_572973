@@ -1,0 +1,49 @@
+body{
+
+	background-image: url("black.jpg");
+    background-color: rgba(95, 95, 95, 0.71);
+}
+
+
+.center-column{
+	width:  600px ;
+	margin: 20px auto ;
+	padding:20px;
+	background-color: rgba(118, 118, 118, 0.87);
+	border-radius: 2px;
+	box-shadow: 6px 2px 30px 0px rgba(2, 2, 2, 0.51);
+}
+
+
+p{
+	color: #ffffff;
+	font-size:15pt;
+	font-family: "monospace", "Verdana";
+	text-align: center;
+}
+
+
+
+table{
+	 width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+
+}
+
+em
+{
+	color: white;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #4CAF50;
+  border-radius: 10px;
+	border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
