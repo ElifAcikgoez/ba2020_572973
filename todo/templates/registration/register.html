@@ -1,0 +1,21 @@
+{% load static %}
+
+        <link rel="stylesheet" type="text/css" href="../../static/css/list.css"/>
+
+{% block content %}
+
+    <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <form method="post" enctype="multipart/form-data">
+         <button
+                type="submit"
+                class="btn btn-success"
+                id="add-btn">Bestätigen
+        </button>
+
+    </form>
+
+    </form>
+
+{% endblock %}

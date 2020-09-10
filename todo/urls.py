@@ -17,6 +17,9 @@ urlpatterns = [
 	#path('posts/<int:pk>/', views.delete_post, name='delete_post'),
 	path('updatenotiz/<str:pk>/', views.updatenotiz, name="updatenotiz"),
 	path('searchdata', views.searchdata, name='searchdata'),
+	path("register/", views.register, name="register"),
+	path('', include('django.contrib.auth.urls')),
+	path('logout', views.logout, name='logout'),
 
 
 

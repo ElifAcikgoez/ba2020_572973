@@ -1,21 +1,26 @@
-from django.contrib import messages
+from django.contrib import messages, auth
+from django.contrib.auth import authenticate
+from django.contrib.auth.forms import UserCreationForm
 from django.core.files.uploadhandler import FileUploadHandler
 from django.forms import modelform_factory
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView
-#from .models import Post
+# from .models import Post
 from .forms import *
 from .models import Task
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.http import require_POST
 
 """
 In der View schreiben wir die Logik der Anwendung. So werden Informationen aus dem Model
  abgefragt und diese werden an ein Template weitergegeben.
 """
+TaskForm = modelform_factory(Task, exclude=['author'])
 
-@login_required
+
+@login_required()
 def index(request):
     """
     Diese Funktion sorgt dafür, dass die eingetragenen todos gespeichert werden und in der Liste erscheinen.
@@ -29,13 +34,15 @@ def index(request):
     :return:Die komplette todo Liste
     :rtype:html
     """
-    tasks = Task.objects.all()
+    tasks = Task.objects.filter(author=request.user).order_by('-id')
     form = TaskForm()
     if request.method == 'POST':
         form = TaskForm(request.POST, request.FILES)
         if form.is_valid():
+            task = form.save(commit=False)
+            task.author = request.user
             form.save()
-        return HttpResponseRedirect('/')
+            return HttpResponseRedirect('/')
 
     context = {'tasks': tasks, 'form': form}
     return render(request, 'todo/list.html', context)
@@ -66,6 +73,8 @@ def updateTask(request, pk):
     context = {'form': form}
 
     return render(request, 'todo/update_task.html', context)
+
+
 @login_required
 def updatenotiz(request, pk):
     """
@@ -90,6 +99,7 @@ def updatenotiz(request, pk):
     context = {'form': form}
 
     return render(request, 'todo/update_note.html', context)
+
 
 @login_required
 def deleteTask(request, pk):
@@ -170,6 +180,7 @@ def details(request, id):
     }
     return render(request, 'update_task.html', context)
 
+
 @login_required
 def searchdata(request):
     """
@@ -178,53 +189,74 @@ def searchdata(request):
     """
     q = request.GET['query']
     mydictionary = {
-        "tasks" : Task.objects.filter(title__contains=q)
+        'tasks': Task.objects.filter(title__contains=q)
     }
-    return render(request,'todo/index.html',context=mydictionary)
+    return render(request, 'todo/index.html', context=mydictionary)
 
-#@login_required
-#def add_note_to_post(request, pk):
- #   """
-  #  Diese Funktion fügt zu jedem todo eine notiz hinzu.
+
+def register(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data['password1']
+            user = authenticate(username=username, password=raw_password)
+            return redirect('/')
+    else:
+        form = UserCreationForm()
+    return render(request, 'registration/register.html', {'form': form})
+
+
+@login_required
+def logout(request):
+    auth.logout(request)
+    #return redirect('/')
+
+    return render(request, 'todo/list.html', )
+# @login_required
+# def add_note_to_post(request, pk):
+#   """
+#  Diese Funktion fügt zu jedem todo eine notiz hinzu.
 #
-  #  :var post: soll entweder
- #   :param request: HTTP-request des client
-   # :type request: str
-    #:param pk: Primary Key des todos
-    #:type pk: int
-    #:return: Gibt die HTML seite zurück , wo man die Noitz zu dem todo mit dem bestimmten Primary-key eintragen kann.
+#  :var post: soll entweder
+#   :param request: HTTP-request des client
+# :type request: str
+#:param pk: Primary Key des todos
+#:type pk: int
+#:return: Gibt die HTML seite zurück , wo man die Noitz zu dem todo mit dem bestimmten Primary-key eintragen kann.
 
-   # """
-    #post = get_object_or_404(Task, pk=pk)
-    #if request.method == "POST":
-     #   form = NoteForm(request.POST)
-      #  if form.is_valid():
-       #     note = form.save(commit=False)
-        #    note.post = post
+# """
+# post = get_object_or_404(Task, pk=pk)
+# if request.method == "POST":
+#   form = NoteForm(request.POST)
+#  if form.is_valid():
+#     note = form.save(commit=False)
+#    note.post = post
 
 #            note.save()
- #           return redirect('list')
-  #  else:
-   #     form = NoteForm()
-    #return render(request, 'todo/add_note_to_post.html', {'form': form})
+#           return redirect('list')
+#  else:
+#     form = NoteForm()
+# return render(request, 'todo/add_note_to_post.html', {'form': form})
 
 
-#def post_list(request):
- #   posts = Post.objects.all()
-  #  return render(request, 'post_list.html', {
-   #     'posts': posts
-    #})
+# def post_list(request):
+#   posts = Post.objects.all()
+#  return render(request, 'post_list.html', {
+#     'posts': posts
+# })
 
 
-#def delete_post(request, pk):
- #   if request.method == 'POST':
-  #      post = Post.objects.get(pk=pk)
-   #     post.delete()
-    #return redirect('post_list')
+# def delete_post(request, pk):
+#   if request.method == 'POST':
+#      post = Post.objects.get(pk=pk)
+#     post.delete()
+# return redirect('post_list')
 
 
-#class CreatePostView(CreateView):
- #   model = Post
-  #  form_class = PostForm
-   # template_name = 'post.html'
-    #success_url = reverse_lazy('list')
+# class CreatePostView(CreateView):
+#   model = Post
+#  form_class = PostForm
+# template_name = 'post.html'
+# success_url = reverse_lazy('list')

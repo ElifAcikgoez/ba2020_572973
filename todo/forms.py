@@ -16,7 +16,7 @@ class TaskForm(forms.ModelForm):
         Das Model Task soll benutzt werden und soll alle felder vom model sichtbar machen.
         """
         model = Task
-        fields = '__all__'
+        fields = ('title', 'complete', 'cover', 'note','author')
 
 
 #class NoteForm(forms.ModelForm):

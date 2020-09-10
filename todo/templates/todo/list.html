@@ -18,18 +18,26 @@
          {% if user.is_authenticated %}
         <p class="top-menu"> &#127881 Hallo {{ user.username }} &#127881</p>
 
-        <a href="{% url 'logout' %}" class="btn btn-danger btn-lg">
+        <!--<a href="{% url 'logout' %}" class="btn btn-danger btn-lg">
+          <span class="glyphicon glyphicon-log-out"></span> Log out
+        </a>-->
+
+        <a href="/logout" class="btn btn-danger btn-lg">
           <span class="glyphicon glyphicon-log-out"></span> Log out
         </a>
 
     {% else %}
+             <center>
+             <p>&#10071 Abgemeldet &#10071</p></center>
         <p>&#10071 Bitte erst einloggen &#10071</p>
+
          <a href="{% url 'login' %}" class="btn btn-light btn-lg">
           <span class="glyphicon glyphicon-log-in"></span> Log in
         </a>
-    {% endif %}
+        {% endif %}
     </center>
 
+    {% if user.is_authenticated %}
     {% block content %}
 <div class="row">
     <div class="col-md-6" style="margin:0 auto;">
@@ -147,6 +155,8 @@
          {% endfor %}
 
  {% endblock %}
+    {% endif %}
+
 	    </div>
     </div>
  </div>

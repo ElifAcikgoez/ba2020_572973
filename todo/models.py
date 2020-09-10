@@ -15,6 +15,7 @@ class Task(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     cover = models.ImageField(upload_to='images/',blank=True,)
     note = models.TextField(max_length=300,blank=True)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, default=None)
 
     def __str__(self):
         return self.title
